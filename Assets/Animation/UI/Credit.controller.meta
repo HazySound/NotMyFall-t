@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefab/Opt_Lobby.prefab.meta
+guid: e7cf9d6b32d442f4390edc6d0c5f6799
+PrefabImporter:
+========
+guid: d8cf5b6282daa354e91fc6a57b23c55a
+NativeFormatImporter:
+>>>>>>>> Simon_newBranch:Assets/Animation/UI/Credit.controller.meta
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

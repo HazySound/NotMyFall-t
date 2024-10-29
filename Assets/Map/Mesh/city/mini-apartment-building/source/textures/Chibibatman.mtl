@@ -1,0 +1,66 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.206520482)
+
+newmtl backboard
+kd 0.8 0.8 0.8
+ka 1 1 1
+ks 0.5 0.5 0.5
+ke 0 0 0
+d 1
+Ns 900
+illum 2
+
+newmtl brick
+kd 0.8 0.183988 0.027537
+ka 1 1 1
+ks 0.5 0.5 0.5
+ke 0 0 0
+d 1
+Ns 900
+illum 2
+
+newmtl doors
+kd 0.8 0.8 0.8
+ka 1 1 1
+ks 0.5 0.5 0.5
+ke 0 0 0
+d 1
+Ns 900
+illum 2
+
+newmtl midrif
+kd 0.178862 0.178862 0.178862
+ka 1 1 1
+ks 0.5 0.5 0.5
+ke 0 0 0
+d 1
+Ns 900
+illum 2
+
+newmtl normal_door
+kd 0.8 0.093618 0.655477
+ka 1 1 1
+ks 0.5 0.5 0.5
+ke 0 0 0
+d 1
+Ns 900
+illum 2
+
+newmtl signs
+kd 0.8 0.01559 0.059527
+ka 1 1 1
+ks 0.5 0.5 0.5
+ke 0 0 0
+d 1
+Ns 900
+illum 2
+
+newmtl windows
+kd 0.076425 0.474552 0.8
+ka 1 1 1
+ks 0.5 0.5 0.5
+ke 0 0 0
+d 1
+Ns 900
+illum 2
+

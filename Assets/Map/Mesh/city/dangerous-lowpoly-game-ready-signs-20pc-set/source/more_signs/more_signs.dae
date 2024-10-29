@@ -1,0 +1,1360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.92.0 commit date:2021-02-24, commit time:16:25, hash:02948a2cab44</authoring_tool>
+    </contributor>
+    <created>2021-09-30T22:49:31</created>
+    <modified>2021-09-30T22:49:31</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Camera-camera" name="Camera.001">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.26</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">1000</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_effects>
+    <effect id="metal-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="TexturesCom_Graphic_WarningLabelSet_512_graphic-effect">
+      <profile_COMMON>
+        <newparam sid="TexturesCom_Graphic_WarningLabelSet_512_graphic_png-surface">
+          <surface type="2D">
+            <init_from>TexturesCom_Graphic_WarningLabelSet_512_graphic_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="TexturesCom_Graphic_WarningLabelSet_512_graphic_png-sampler">
+          <sampler2D>
+            <source>TexturesCom_Graphic_WarningLabelSet_512_graphic_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="TexturesCom_Graphic_WarningLabelSet_512_graphic_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="TexturesCom_Graphic_WarningLabelSet_512_graphic_png" name="TexturesCom_Graphic_WarningLabelSet_512_graphic_png">
+      <init_from>TexturesCom_Graphic_WarningLabelSet_512_graphic.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="metal-material" name="metal">
+      <instance_effect url="#metal-effect"/>
+    </material>
+    <material id="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" name="TexturesCom_Graphic_WarningLabelSet_512_graphic">
+      <instance_effect url="#TexturesCom_Graphic_WarningLabelSet_512_graphic-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Plane-mesh" name="Plane">
+      <mesh>
+        <source id="Plane-mesh-positions">
+          <float_array id="Plane-mesh-positions-array" count="36">-0.0131784 0 -0.007509052 0.0131784 0 -0.007509052 -0.0131784 0 0.5434042 0.0131784 0 0.5434042 -0.009841024 0 -0.007509052 -0.003978252 0.006552994 -0.007509052 0.003978252 0.006552994 -0.007509052 0.009841024 0 -0.007509052 0.009841024 0 0.5434042 0.003978252 0.006552994 0.5434042 -0.003978252 0.006552994 0.5434042 -0.009841024 0 0.5434042</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-mesh-normals">
+          <float_array id="Plane-mesh-normals-array" count="27">0 -1 0 -0.4081875 -0.9128981 0 -0.4081875 -0.9128983 0 0.4081875 -0.9128983 0 0.4081874 -0.9128983 0 0.4081875 -0.9128981 0 -0.4081875 -0.9128982 0 0.4081875 -0.9128983 0 -0.4081875 -0.9128983 0</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-normals-array" count="9" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-mesh-map-0">
+          <float_array id="Plane-mesh-map-0-array" count="60">1 0 0.8 1 0.8 0 0.2 0 0 1 0 0 0.4 0 0.2 1 0.2 0 0.6 0 0.4 1 0.4 0 0.8 0 0.6 1 0.6 0 1 0 1 1 0.8 1 0.2 0 0.2 1 0 1 0.4 0 0.4 1 0.2 1 0.6 0 0.6 1 0.4 1 0.8 0 0.8 1 0.6 1</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-map-0-array" count="30" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane-mesh-vertices">
+          <input semantic="POSITION" source="#Plane-mesh-positions"/>
+        </vertices>
+        <triangles material="metal-material" count="10">
+          <input semantic="VERTEX" source="#Plane-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 8 1 1 7 2 2 4 3 3 2 0 4 0 0 5 5 4 6 11 5 7 4 3 8 6 6 9 10 7 10 5 4 11 7 2 12 9 8 13 6 6 14 1 0 15 3 0 16 8 1 17 4 3 18 11 5 19 2 0 20 5 4 21 10 7 22 11 5 23 6 6 24 9 8 25 10 7 26 7 2 27 8 1 28 9 8 29</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.028">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-positions-array" count="48">-0.08856374 0.1132524 0.002011656 0.08835375 0.1128322 0.002011656 0.09381681 0.1077894 0.002011656 0.09381681 -0.1061084 0.002011656 0.08793359 -0.1136727 0.002011656 -0.08772331 -0.1136727 0.002011656 -0.09360653 -0.1065287 0.002011656 -0.0940268 0.1061085 0.002011656 -0.08856374 0.1132524 -0.002011656 0.08835375 0.1128322 -0.002011656 0.09381681 0.1077894 -0.002011656 0.09381681 -0.1061084 -0.002011656 0.08793359 -0.1136727 -0.002011656 -0.08772331 -0.1136727 -0.002011656 -0.09360653 -0.1065287 -0.002011656 -0.0940268 0.1061085 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-normals-array" count="93">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 -0.4393538 0.8983142 0 0.4267857 0.9043528 0 0.426786 0.9043527 0 -0.9160452 -0.4010751 0 -0.945874 0.3245342 0 -0.945874 0.324534 0 0.4419625 -0.8970335 0 -0.3652451 -0.9309114 0 -0.3652446 -0.9309117 0 0.9475109 -0.3197237 0 0.441962 -0.8970338 0 0.940923 0.3386206 0 0.9409229 0.3386211 0 -0.439354 0.898314 0 -0.9160452 -0.401075 0 0.9475107 -0.3197242 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-normals-array" count="31" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-map-0-array" count="168">0.592738 0.2411453 0.5977982 0.2482892 0.7616724 0.247869 0.8026205 0.02136409 0.9782776 0.02136409 0.9841607 0.02892827 0.9782776 0.02136409 0.8026205 0.02136409 0.8026205 0.02136409 0.9841607 0.2428262 0.9841607 0.02892827 0.9841607 0.02892827 0.8017801 0.2482892 0.9786976 0.247869 0.9786976 0.247869 0.7963171 0.2411453 0.8017801 0.2482892 0.8017801 0.2482892 0.8026205 0.02136409 0.7967373 0.028508 0.7967373 0.028508 0.9841607 0.02892827 0.9782776 0.02136409 0.9782776 0.02136409 0.9786976 0.247869 0.9841607 0.2428262 0.9841607 0.2428262 0.7967373 0.028508 0.7963171 0.2411453 0.7963171 0.2411453 0.7616724 0.247869 0.7667328 0.2428262 0.592738 0.2411453 0.7667328 0.2428262 0.7667328 0.02892827 0.592738 0.2411453 0.7667328 0.02892827 0.7612834 0.02136409 0.5985767 0.02136409 0.5985767 0.02136409 0.5931271 0.028508 0.7667328 0.02892827 0.5931271 0.028508 0.592738 0.2411453 0.7667328 0.02892827 0.9841607 0.02892827 0.9841607 0.2428262 0.7963171 0.2411453 0.9841607 0.2428262 0.9786976 0.247869 0.7963171 0.2411453 0.9786976 0.247869 0.8017801 0.2482892 0.7963171 0.2411453 0.7963171 0.2411453 0.7967373 0.028508 0.9841607 0.02892827 0.7967373 0.028508 0.8026205 0.02136409 0.9841607 0.02892827 0.9782776 0.02136409 0.9782776 0.02136409 0.8026205 0.02136409 0.9841607 0.2428262 0.9841607 0.2428262 0.9841607 0.02892827 0.8017801 0.2482892 0.8017801 0.2482892 0.9786976 0.247869 0.7963171 0.2411453 0.7963171 0.2411453 0.8017801 0.2482892 0.8026205 0.02136409 0.8026205 0.02136409 0.7967373 0.028508 0.9841607 0.02892827 0.9841607 0.02892827 0.9782776 0.02136409 0.9786976 0.247869 0.9786976 0.247869 0.9841607 0.2428262 0.7967373 0.028508 0.7967373 0.028508 0.7963171 0.2411453</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="6">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-map-0" offset="2" set="0"/>
+          <p>7 0 0 0 1 1 1 2 2 1 2 30 2 21 31 7 0 32 2 21 33 3 22 34 7 0 35 3 22 36 4 23 37 5 24 38 5 24 39 6 25 40 3 22 41 6 25 42 7 0 43 3 22 44</p>
+        </triangles>
+        <triangles material="metal-material" count="22">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh-map-0" offset="2" set="0"/>
+          <p>13 3 3 12 3 4 11 4 5 4 5 6 13 6 7 5 7 8 2 8 9 11 9 10 3 10 11 0 11 12 9 12 13 1 13 14 7 14 15 8 15 16 0 11 17 5 7 18 14 16 19 6 17 20 3 10 21 12 18 22 4 5 23 1 13 24 10 19 25 2 8 26 6 17 27 15 20 28 7 14 29 11 4 45 10 26 46 15 27 47 10 26 48 9 28 49 15 27 50 9 28 51 8 29 52 15 27 53 15 27 54 14 30 55 11 4 56 14 30 57 13 3 58 11 4 59 4 5 60 12 18 61 13 6 62 2 8 63 10 19 64 11 9 65 0 11 66 8 15 67 9 12 68 7 14 69 15 20 70 8 15 71 5 7 72 13 6 73 14 16 74 3 10 75 11 9 76 12 18 77 1 13 78 9 12 79 10 19 80 6 17 81 14 16 82 15 20 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.027">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-positions-array" count="48">-0.07623392 0.09493565 0.002011656 -0.07252788 0.09771519 0.002011656 0.07172065 0.09743779 0.002011656 0.07643651 0.09521859 0.002011656 0.0758816 -0.09396892 0.002011656 0.0728302 -0.09840732 0.002011656 -0.0719732 -0.09840732 0.002011656 -0.0761342 -0.09452372 0.002011656 -0.07623392 0.09493565 -0.002011656 -0.07252788 0.09771519 -0.002011656 0.07172065 0.09743779 -0.002011656 0.07643651 0.09521859 -0.002011656 0.0758816 -0.09396892 -0.002011656 0.0728302 -0.09840732 -0.002011656 -0.0719732 -0.09840732 -0.002011656 -0.0761342 -0.09452372 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-normals-array" count="90">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.894545 -0.446978 0 0.3153156 -0.948987 0 0.3153159 -0.9489868 0 0.9170434 0.3987877 0 0.894545 -0.4469779 0 -0.4655498 0.8850216 0 0.3667069 0.9303366 0 0.3667066 0.9303367 0 -0.8451182 -0.5345796 0 -0.9545624 0.298011 0 -0.9545623 0.2980115 0 -0.2190902 -0.9757047 0 -0.2190905 -0.9757046 0 0.9170432 0.398788 0 -0.4655498 0.8850218 0 -0.8451179 -0.5345799 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-normals-array" count="30" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-map-0-array" count="168">0.7948858 0.4743735 0.7990468 0.2829667 0.6470309 0.2824119 0.9801006 0.2829667 0.9759397 0.4743735 0.8280848 0.2824119 0.8279851 0.4718714 0.8316911 0.4746509 0.8316911 0.4746509 0.8280848 0.2824119 0.8279851 0.4718714 0.8279851 0.4718714 0.9770492 0.2785283 0.8322458 0.2785283 0.8322458 0.2785283 0.9806554 0.4721543 0.9801006 0.2829667 0.9801006 0.2829667 0.8316911 0.4746509 0.9759397 0.4743735 0.9759397 0.4743735 0.8322458 0.2785283 0.8280848 0.2824119 0.8280848 0.2824119 0.9801006 0.2829667 0.9770492 0.2785283 0.9770492 0.2785283 0.9759397 0.4743735 0.9806554 0.4721543 0.9806554 0.4721543 0.7948858 0.4743735 0.7996016 0.4721543 0.7990468 0.2829667 0.7990468 0.2829667 0.7959953 0.2785283 0.651192 0.2785283 0.651192 0.2785283 0.6470309 0.2824119 0.7990468 0.2829667 0.6470309 0.2824119 0.6469312 0.4718714 0.6506372 0.4746509 0.7948858 0.4743735 0.6470309 0.2824119 0.6506372 0.4746509 0.9801006 0.2829667 0.9806554 0.4721543 0.9759397 0.4743735 0.9759397 0.4743735 0.8316911 0.4746509 0.8280848 0.2824119 0.8316911 0.4746509 0.8279851 0.4718714 0.8280848 0.2824119 0.8280848 0.2824119 0.8322458 0.2785283 0.9801006 0.2829667 0.8322458 0.2785283 0.9770492 0.2785283 0.9801006 0.2829667 0.8279851 0.4718714 0.8279851 0.4718714 0.8316911 0.4746509 0.8280848 0.2824119 0.8280848 0.2824119 0.8279851 0.4718714 0.9770492 0.2785283 0.9770492 0.2785283 0.8322458 0.2785283 0.9806554 0.4721543 0.9806554 0.4721543 0.9801006 0.2829667 0.8316911 0.4746509 0.8316911 0.4746509 0.9759397 0.4743735 0.8322458 0.2785283 0.8322458 0.2785283 0.8280848 0.2824119 0.9801006 0.2829667 0.9801006 0.2829667 0.9770492 0.2785283 0.9759397 0.4743735 0.9759397 0.4743735 0.9806554 0.4721543</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="6">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-map-0" offset="2" set="0"/>
+          <p>2 0 0 4 1 1 7 2 2 2 0 30 3 22 31 4 1 32 4 1 33 5 23 34 6 24 35 6 24 36 7 2 37 4 1 38 7 2 39 0 25 40 1 26 41 2 0 42 7 2 43 1 26 44</p>
+        </triangles>
+        <triangles material="metal-material" count="22">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh-map-0" offset="2" set="0"/>
+          <p>12 3 3 10 4 4 15 5 5 0 6 6 9 7 7 1 8 8 7 9 9 8 10 10 0 6 11 5 11 12 14 12 13 6 13 14 3 14 15 12 15 16 4 16 17 1 8 18 10 17 19 2 18 20 6 13 21 15 19 22 7 9 23 4 16 24 13 20 25 5 11 26 2 18 27 11 21 28 3 14 29 12 3 45 11 27 46 10 4 47 10 4 48 9 28 49 15 5 50 9 28 51 8 29 52 15 5 53 15 5 54 14 29 55 12 3 56 14 29 57 13 29 58 12 3 59 0 6 60 8 10 61 9 7 62 7 9 63 15 19 64 8 10 65 5 11 66 13 20 67 14 12 68 3 14 69 11 21 70 12 15 71 1 8 72 9 7 73 10 17 74 6 13 75 14 12 76 15 19 77 4 16 78 12 15 79 13 20 80 2 18 81 10 17 82 11 21 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.026">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-positions-array" count="48">-0.06494492 0.08529096 0.002011656 0.06584423 0.08566254 0.002011656 0.07231897 0.07885146 0.002011656 0.07276445 -0.07944995 0.002011656 0.06662094 -0.08559346 0.002011656 -0.06721329 -0.08483737 0.002011656 -0.07288426 -0.07992255 0.002011656 -0.07250618 0.07999813 0.002011656 -0.06494492 0.08529096 -0.002011656 0.06584423 0.08566254 -0.002011656 0.07231897 0.07885146 -0.002011656 0.07276445 -0.07944995 -0.002011656 0.06662094 -0.08559346 -0.002011656 -0.06721329 -0.08483737 -0.002011656 -0.07288426 -0.07992255 -0.002011656 -0.07250618 0.07999813 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-normals-array" count="93">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.9101417 0.4142972 0 0.8864321 -0.4628586 0 0.8864321 -0.4628586 0 -0.3800708 0.9249575 0 0.3521521 0.9359428 0 0.3521523 0.9359428 0 -0.9281255 -0.3722677 0 -0.9244168 0.3813837 0 -0.9244167 0.3813841 0 0.3019942 -0.9533098 0 -0.3930392 -0.9195218 0 -0.3930386 -0.919522 0 0.3019939 -0.95331 0 0.9101416 0.4142974 0 -0.3800709 0.9249574 0 -0.9281255 -0.3722677 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-normals-array" count="31" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-map-0-array" count="168">0.5778671 0.6176282 0.5717235 0.6114848 0.4378892 0.6122409 0.418017 0.9648137 0.4115422 0.9716249 0.2807531 0.9712532 0.2728137 0.8060398 0.2731919 0.9659605 0.2731919 0.9659605 0.4123191 0.8003688 0.2784847 0.8011249 0.2784847 0.8011249 0.418017 0.9648137 0.4184626 0.8065122 0.4184626 0.8065122 0.2807531 0.9712532 0.4115422 0.9716249 0.4115422 0.9716249 0.2731919 0.9659605 0.2807531 0.9712532 0.2807531 0.9712532 0.2784847 0.8011249 0.2728137 0.8060398 0.2728137 0.8060398 0.4184626 0.8065122 0.4123191 0.8003688 0.4123191 0.8003688 0.4115422 0.9716249 0.418017 0.9648137 0.418017 0.9648137 0.4378892 0.6122409 0.4322183 0.6171557 0.5778671 0.6176282 0.4322183 0.6171557 0.4325963 0.7770764 0.4401575 0.7823691 0.4401575 0.7823691 0.5709468 0.7827408 0.5774216 0.7759297 0.5774216 0.7759297 0.5778671 0.6176282 0.4401575 0.7823691 0.4401575 0.7823691 0.5778671 0.6176282 0.4322183 0.6171557 0.2731919 0.9659605 0.2728137 0.8060398 0.2807531 0.9712532 0.2728137 0.8060398 0.2784847 0.8011249 0.4184626 0.8065122 0.2807531 0.9712532 0.2728137 0.8060398 0.4184626 0.8065122 0.2784847 0.8011249 0.4123191 0.8003688 0.4184626 0.8065122 0.4184626 0.8065122 0.418017 0.9648137 0.2807531 0.9712532 0.2728137 0.8060398 0.2728137 0.8060398 0.2731919 0.9659605 0.4123191 0.8003688 0.4123191 0.8003688 0.2784847 0.8011249 0.418017 0.9648137 0.418017 0.9648137 0.4184626 0.8065122 0.2807531 0.9712532 0.2807531 0.9712532 0.4115422 0.9716249 0.2731919 0.9659605 0.2731919 0.9659605 0.2807531 0.9712532 0.2784847 0.8011249 0.2784847 0.8011249 0.2728137 0.8060398 0.4184626 0.8065122 0.4184626 0.8065122 0.4123191 0.8003688 0.4115422 0.9716249 0.4115422 0.9716249 0.418017 0.9648137</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="6">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 4 1 1 5 2 2 5 2 30 6 22 31 3 0 32 6 22 33 7 23 34 0 24 35 0 24 36 1 25 37 2 25 38 2 25 39 3 0 40 0 24 41 0 24 42 3 0 43 6 22 44</p>
+        </triangles>
+        <triangles material="metal-material" count="22">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh-map-0" offset="2" set="0"/>
+          <p>10 3 3 9 4 4 8 5 5 6 6 6 15 7 7 7 8 8 4 9 9 13 10 10 5 11 11 2 12 12 11 13 13 3 14 14 0 15 15 9 16 16 1 17 17 7 8 18 8 18 19 0 15 20 5 11 21 14 19 22 6 6 23 3 14 24 12 20 25 4 9 26 1 17 27 10 21 28 2 12 29 15 26 45 14 27 46 8 5 47 14 27 48 13 28 49 11 29 50 8 5 51 14 27 52 11 29 53 13 28 54 12 30 55 11 29 56 11 29 57 10 3 58 8 5 59 6 6 60 14 19 61 15 7 62 4 9 63 12 20 64 13 10 65 2 12 66 10 21 67 11 13 68 0 15 69 8 18 70 9 16 71 7 8 72 15 7 73 8 18 74 5 11 75 13 10 76 14 19 77 3 14 78 11 13 79 12 20 80 1 17 81 9 16 82 10 21 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.025">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-positions-array" count="48">-0.06494492 0.08529096 0.002011656 0.06584423 0.08566254 0.002011656 0.07231897 0.07885146 0.002011656 0.07276445 -0.07944995 0.002011656 0.06662094 -0.08559346 0.002011656 -0.06721329 -0.08483737 0.002011656 -0.07288426 -0.07992255 0.002011656 -0.07250618 0.07999813 0.002011656 -0.06494492 0.08529096 -0.002011656 0.06584423 0.08566254 -0.002011656 0.07231897 0.07885146 -0.002011656 0.07276445 -0.07944995 -0.002011656 0.06662094 -0.08559346 -0.002011656 -0.06721329 -0.08483737 -0.002011656 -0.07288426 -0.07992255 -0.002011656 -0.07250618 0.07999813 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-normals-array" count="93">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.9101417 0.4142972 0 0.8864321 -0.4628586 0 0.8864321 -0.4628586 0 -0.3800708 0.9249575 0 0.3521521 0.9359428 0 0.3521523 0.9359428 0 -0.9281255 -0.3722677 0 -0.9244168 0.3813837 0 -0.9244167 0.3813841 0 0.3019942 -0.9533098 0 -0.3930392 -0.9195218 0 -0.3930386 -0.919522 0 0.3019939 -0.95331 0 0.9101416 0.4142974 0 -0.3800709 0.9249574 0 -0.9281255 -0.3722677 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-normals-array" count="31" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-map-0-array" count="168">0.4180421 0.6176282 0.4118986 0.6114848 0.2780642 0.6122409 0.418017 0.9648137 0.4115422 0.9716249 0.2807531 0.9712532 0.2728137 0.8060398 0.2731919 0.9659605 0.2731919 0.9659605 0.4123191 0.8003688 0.2784847 0.8011249 0.2784847 0.8011249 0.418017 0.9648137 0.4184626 0.8065122 0.4184626 0.8065122 0.2807531 0.9712532 0.4115422 0.9716249 0.4115422 0.9716249 0.2731919 0.9659605 0.2807531 0.9712532 0.2807531 0.9712532 0.2784847 0.8011249 0.2728137 0.8060398 0.2728137 0.8060398 0.4184626 0.8065122 0.4123191 0.8003688 0.4123191 0.8003688 0.4115422 0.9716249 0.418017 0.9648137 0.418017 0.9648137 0.2780642 0.6122409 0.2723933 0.6171557 0.4180421 0.6176282 0.2723933 0.6171557 0.2727714 0.7770764 0.2803326 0.7823691 0.2803326 0.7823691 0.4111217 0.7827408 0.4175966 0.7759297 0.4175966 0.7759297 0.4180421 0.6176282 0.2803326 0.7823691 0.2803326 0.7823691 0.4180421 0.6176282 0.2723933 0.6171557 0.2731919 0.9659605 0.2728137 0.8060398 0.2807531 0.9712532 0.2728137 0.8060398 0.2784847 0.8011249 0.4184626 0.8065122 0.2807531 0.9712532 0.2728137 0.8060398 0.4184626 0.8065122 0.2784847 0.8011249 0.4123191 0.8003688 0.4184626 0.8065122 0.4184626 0.8065122 0.418017 0.9648137 0.2807531 0.9712532 0.2728137 0.8060398 0.2728137 0.8060398 0.2731919 0.9659605 0.4123191 0.8003688 0.4123191 0.8003688 0.2784847 0.8011249 0.418017 0.9648137 0.418017 0.9648137 0.4184626 0.8065122 0.2807531 0.9712532 0.2807531 0.9712532 0.4115422 0.9716249 0.2731919 0.9659605 0.2731919 0.9659605 0.2807531 0.9712532 0.2784847 0.8011249 0.2784847 0.8011249 0.2728137 0.8060398 0.4184626 0.8065122 0.4184626 0.8065122 0.4123191 0.8003688 0.4115422 0.9716249 0.4115422 0.9716249 0.418017 0.9648137</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="6">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 4 1 1 5 2 2 5 2 30 6 22 31 3 0 32 6 22 33 7 23 34 0 24 35 0 24 36 1 25 37 2 25 38 2 25 39 3 0 40 0 24 41 0 24 42 3 0 43 6 22 44</p>
+        </triangles>
+        <triangles material="metal-material" count="22">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh-map-0" offset="2" set="0"/>
+          <p>10 3 3 9 4 4 8 5 5 6 6 6 15 7 7 7 8 8 4 9 9 13 10 10 5 11 11 2 12 12 11 13 13 3 14 14 0 15 15 9 16 16 1 17 17 7 8 18 8 18 19 0 15 20 5 11 21 14 19 22 6 6 23 3 14 24 12 20 25 4 9 26 1 17 27 10 21 28 2 12 29 15 26 45 14 27 46 8 5 47 14 27 48 13 28 49 11 29 50 8 5 51 14 27 52 11 29 53 13 28 54 12 30 55 11 29 56 11 29 57 10 3 58 8 5 59 6 6 60 14 19 61 15 7 62 4 9 63 12 20 64 13 10 65 2 12 66 10 21 67 11 13 68 0 15 69 8 18 70 9 16 71 7 8 72 15 7 73 8 18 74 5 11 75 13 10 76 14 19 77 3 14 78 11 13 79 12 20 80 1 17 81 9 16 82 10 21 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.024">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-positions-array" count="48">-0.06494492 0.08529096 0.002011656 0.06584423 0.08566254 0.002011656 0.07231897 0.07885146 0.002011656 0.07276445 -0.07944995 0.002011656 0.06662094 -0.08559346 0.002011656 -0.06721329 -0.08483737 0.002011656 -0.07288426 -0.07992255 0.002011656 -0.07250618 0.07999813 0.002011656 -0.06494492 0.08529096 -0.002011656 0.06584423 0.08566254 -0.002011656 0.07231897 0.07885146 -0.002011656 0.07276445 -0.07944995 -0.002011656 0.06662094 -0.08559346 -0.002011656 -0.06721329 -0.08483737 -0.002011656 -0.07288426 -0.07992255 -0.002011656 -0.07250618 0.07999813 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-normals-array" count="93">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.9101417 0.4142972 0 0.8864321 -0.4628586 0 0.8864321 -0.4628586 0 -0.3800708 0.9249575 0 0.3521521 0.9359428 0 0.3521523 0.9359428 0 -0.9281255 -0.3722677 0 -0.9244168 0.3813837 0 -0.9244167 0.3813841 0 0.3019942 -0.9533098 0 -0.3930392 -0.9195218 0 -0.3930386 -0.919522 0 0.3019939 -0.95331 0 0.9101416 0.4142974 0 -0.3800709 0.9249574 0 -0.9281255 -0.3722677 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-normals-array" count="31" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-map-0-array" count="168">0.7405979 0.8065122 0.7344544 0.8003688 0.60062 0.8011249 0.418017 0.9648137 0.4115422 0.9716249 0.2807531 0.9712532 0.2728137 0.8060398 0.2731919 0.9659605 0.2731919 0.9659605 0.4123191 0.8003688 0.2784847 0.8011249 0.2784847 0.8011249 0.418017 0.9648137 0.4184626 0.8065122 0.4184626 0.8065122 0.2807531 0.9712532 0.4115422 0.9716249 0.4115422 0.9716249 0.2731919 0.9659605 0.2807531 0.9712532 0.2807531 0.9712532 0.2784847 0.8011249 0.2728137 0.8060398 0.2728137 0.8060398 0.4184626 0.8065122 0.4123191 0.8003688 0.4123191 0.8003688 0.4115422 0.9716249 0.418017 0.9648137 0.418017 0.9648137 0.60062 0.8011249 0.5949491 0.8060398 0.7405979 0.8065122 0.5949491 0.8060398 0.5953272 0.9659605 0.6028884 0.9712532 0.6028884 0.9712532 0.7336776 0.9716249 0.7401524 0.9648137 0.7401524 0.9648137 0.7405979 0.8065122 0.6028884 0.9712532 0.6028884 0.9712532 0.7405979 0.8065122 0.5949491 0.8060398 0.2731919 0.9659605 0.2728137 0.8060398 0.2807531 0.9712532 0.2728137 0.8060398 0.2784847 0.8011249 0.4184626 0.8065122 0.2807531 0.9712532 0.2728137 0.8060398 0.4184626 0.8065122 0.2784847 0.8011249 0.4123191 0.8003688 0.4184626 0.8065122 0.4184626 0.8065122 0.418017 0.9648137 0.2807531 0.9712532 0.2728137 0.8060398 0.2728137 0.8060398 0.2731919 0.9659605 0.4123191 0.8003688 0.4123191 0.8003688 0.2784847 0.8011249 0.418017 0.9648137 0.418017 0.9648137 0.4184626 0.8065122 0.2807531 0.9712532 0.2807531 0.9712532 0.4115422 0.9716249 0.2731919 0.9659605 0.2731919 0.9659605 0.2807531 0.9712532 0.2784847 0.8011249 0.2784847 0.8011249 0.2728137 0.8060398 0.4184626 0.8065122 0.4184626 0.8065122 0.4123191 0.8003688 0.4115422 0.9716249 0.4115422 0.9716249 0.418017 0.9648137</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="6">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 4 1 1 5 2 2 5 2 30 6 22 31 3 0 32 6 22 33 7 23 34 0 24 35 0 24 36 1 25 37 2 25 38 2 25 39 3 0 40 0 24 41 0 24 42 3 0 43 6 22 44</p>
+        </triangles>
+        <triangles material="metal-material" count="22">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh-map-0" offset="2" set="0"/>
+          <p>10 3 3 9 4 4 8 5 5 6 6 6 15 7 7 7 8 8 4 9 9 13 10 10 5 11 11 2 12 12 11 13 13 3 14 14 0 15 15 9 16 16 1 17 17 7 8 18 8 18 19 0 15 20 5 11 21 14 19 22 6 6 23 3 14 24 12 20 25 4 9 26 1 17 27 10 21 28 2 12 29 15 26 45 14 27 46 8 5 47 14 27 48 13 28 49 11 29 50 8 5 51 14 27 52 11 29 53 13 28 54 12 30 55 11 29 56 11 29 57 10 3 58 8 5 59 6 6 60 14 19 61 15 7 62 4 9 63 12 20 64 13 10 65 2 12 66 10 21 67 11 13 68 0 15 69 8 18 70 9 16 71 7 8 72 15 7 73 8 18 74 5 11 75 13 10 76 14 19 77 3 14 78 11 13 79 12 20 80 1 17 81 9 16 82 10 21 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.023">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-positions-array" count="48">-0.06494492 0.08529096 0.002011656 0.06584423 0.08566254 0.002011656 0.07231897 0.07885146 0.002011656 0.07276445 -0.07944995 0.002011656 0.06662094 -0.08559346 0.002011656 -0.06721329 -0.08483737 0.002011656 -0.07288426 -0.07992255 0.002011656 -0.07250618 0.07999813 0.002011656 -0.06494492 0.08529096 -0.002011656 0.06584423 0.08566254 -0.002011656 0.07231897 0.07885146 -0.002011656 0.07276445 -0.07944995 -0.002011656 0.06662094 -0.08559346 -0.002011656 -0.06721329 -0.08483737 -0.002011656 -0.07288426 -0.07992255 -0.002011656 -0.07250618 0.07999813 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-normals-array" count="93">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.9101417 0.4142972 0 0.8864321 -0.4628586 0 0.8864321 -0.4628586 0 -0.3800708 0.9249575 0 0.3521521 0.9359428 0 0.3521523 0.9359428 0 -0.9281255 -0.3722677 0 -0.9244168 0.3813837 0 -0.9244167 0.3813841 0 0.3019942 -0.9533098 0 -0.3930392 -0.9195218 0 -0.3930386 -0.919522 0 0.3019939 -0.95331 0 0.9101416 0.4142974 0 -0.3800709 0.9249574 0 -0.9281255 -0.3722677 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-normals-array" count="31" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-map-0-array" count="168">0.5800785 0.8065122 0.573935 0.8003688 0.4401006 0.8011249 0.418017 0.9648137 0.4115422 0.9716249 0.2807531 0.9712532 0.2728137 0.8060398 0.2731919 0.9659605 0.2731919 0.9659605 0.4123191 0.8003688 0.2784847 0.8011249 0.2784847 0.8011249 0.418017 0.9648137 0.4184626 0.8065122 0.4184626 0.8065122 0.2807531 0.9712532 0.4115422 0.9716249 0.4115422 0.9716249 0.2731919 0.9659605 0.2807531 0.9712532 0.2807531 0.9712532 0.2784847 0.8011249 0.2728137 0.8060398 0.2728137 0.8060398 0.4184626 0.8065122 0.4123191 0.8003688 0.4123191 0.8003688 0.4115422 0.9716249 0.418017 0.9648137 0.418017 0.9648137 0.4401006 0.8011249 0.4344297 0.8060398 0.5800785 0.8065122 0.4344297 0.8060398 0.4348078 0.9659605 0.442369 0.9712532 0.442369 0.9712532 0.5731582 0.9716249 0.579633 0.9648137 0.579633 0.9648137 0.5800785 0.8065122 0.442369 0.9712532 0.442369 0.9712532 0.5800785 0.8065122 0.4344297 0.8060398 0.2731919 0.9659605 0.2728137 0.8060398 0.2807531 0.9712532 0.2728137 0.8060398 0.2784847 0.8011249 0.4184626 0.8065122 0.2807531 0.9712532 0.2728137 0.8060398 0.4184626 0.8065122 0.2784847 0.8011249 0.4123191 0.8003688 0.4184626 0.8065122 0.4184626 0.8065122 0.418017 0.9648137 0.2807531 0.9712532 0.2728137 0.8060398 0.2728137 0.8060398 0.2731919 0.9659605 0.4123191 0.8003688 0.4123191 0.8003688 0.2784847 0.8011249 0.418017 0.9648137 0.418017 0.9648137 0.4184626 0.8065122 0.2807531 0.9712532 0.2807531 0.9712532 0.4115422 0.9716249 0.2731919 0.9659605 0.2731919 0.9659605 0.2807531 0.9712532 0.2784847 0.8011249 0.2784847 0.8011249 0.2728137 0.8060398 0.4184626 0.8065122 0.4184626 0.8065122 0.4123191 0.8003688 0.4115422 0.9716249 0.4115422 0.9716249 0.418017 0.9648137</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="6">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 4 1 1 5 2 2 5 2 30 6 22 31 3 0 32 6 22 33 7 23 34 0 24 35 0 24 36 1 25 37 2 25 38 2 25 39 3 0 40 0 24 41 0 24 42 3 0 43 6 22 44</p>
+        </triangles>
+        <triangles material="metal-material" count="22">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh-map-0" offset="2" set="0"/>
+          <p>10 3 3 9 4 4 8 5 5 6 6 6 15 7 7 7 8 8 4 9 9 13 10 10 5 11 11 2 12 12 11 13 13 3 14 14 0 15 15 9 16 16 1 17 17 7 8 18 8 18 19 0 15 20 5 11 21 14 19 22 6 6 23 3 14 24 12 20 25 4 9 26 1 17 27 10 21 28 2 12 29 15 26 45 14 27 46 8 5 47 14 27 48 13 28 49 11 29 50 8 5 51 14 27 52 11 29 53 13 28 54 12 30 55 11 29 56 11 29 57 10 3 58 8 5 59 6 6 60 14 19 61 15 7 62 4 9 63 12 20 64 13 10 65 2 12 66 10 21 67 11 13 68 0 15 69 8 18 70 9 16 71 7 8 72 15 7 73 8 18 74 5 11 75 13 10 76 14 19 77 3 14 78 11 13 79 12 20 80 1 17 81 9 16 82 10 21 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.022">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-positions-array" count="72">0.006808817 0.102294 0.002011656 0.09974473 0.009358048 0.002011656 0.1040043 6.4522e-5 0.002011656 0.1001319 -0.008067369 0.002011656 0.008745014 -0.1013905 0.002011656 2.25876e-4 -0.1037139 0.002011656 -0.007131516 -0.1013905 0.002011656 -0.09890574 -0.009229004 0.002011656 -0.1031653 -3.227e-4 0.002011656 -0.09968018 0.009745359 0.002011656 -0.0106166 0.09842169 0.002011656 -1.61339e-4 0.1042302 0.002011656 0.006808817 0.102294 -0.002011656 0.09974473 0.009358048 -0.002011656 0.1040043 6.4522e-5 -0.002011656 0.1001319 -0.008067369 -0.002011656 0.008745014 -0.1013905 -0.002011656 2.25876e-4 -0.1037139 -0.002011656 -0.007131516 -0.1013905 -0.002011656 -0.09890574 -0.009229004 -0.002011656 -0.1031653 -3.227e-4 -0.002011656 -0.09968018 0.009745359 -0.002011656 -0.0106166 0.09842169 -0.002011656 -1.61339e-4 0.1042302 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-normals-array" count="114">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.9999732 0.007328391 0 -0.8198378 0.5725958 0 -0.8198378 0.5725959 0 0.8470366 -0.5315346 0 0.6013256 -0.7990041 0 0.5198636 0.8542493 0 0.8169461 0.576714 0 0.8169463 0.5767139 0 -0.5064523 0.862268 0 -0.5064522 0.8622682 0 0.1178013 -0.9930373 0 0.1178013 -0.9930372 0 -0.5039564 -0.8637291 0 -0.821031 -0.5708837 0 -0.8210312 -0.5708835 0 0.9984081 0.05640125 0 0.9984083 0.05640125 0 0.0198127 0.9998038 0 0.0198127 0.9998038 0 -0.5039563 -0.8637292 0 -0.9999732 0.007328212 0 0.5198634 0.8542495 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-normals-array" count="38" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-map-0-array" count="264">0.3038918 0.3638867 0.3143471 0.3696951 0.3213173 0.367759 0.5777621 0.1183511 0.3791117 0.09976398 0.5781493 0.1009256 0.5820217 0.1090576 0.5781493 0.1009256 0.5781493 0.1009256 0.3783372 0.1187384 0.4674007 0.2074147 0.4674007 0.2074147 0.4708859 0.007602512 0.3791117 0.09976398 0.3791117 0.09976398 0.5781493 0.1009256 0.4867624 0.007602512 0.4867624 0.007602512 0.4674007 0.2074147 0.477856 0.2132232 0.477856 0.2132232 0.4848262 0.211287 0.5777621 0.1183511 0.5777621 0.1183511 0.3791117 0.09976398 0.3748521 0.1086703 0.3748521 0.1086703 0.4867624 0.007602512 0.4782433 0.005279123 0.4782433 0.005279123 0.477856 0.2132232 0.4848262 0.211287 0.4848262 0.211287 0.5777621 0.1183511 0.5820217 0.1090576 0.5820217 0.1090576 0.3748521 0.1086703 0.3783372 0.1187384 0.3783372 0.1187384 0.4782433 0.005279123 0.4708859 0.007602512 0.4708859 0.007602512 0.3213173 0.367759 0.4142532 0.274823 0.3038918 0.3638867 0.4142532 0.274823 0.4185128 0.2655295 0.4146403 0.2573976 0.2156026 0.2562359 0.4146403 0.2573976 0.3073769 0.1640744 0.4146403 0.2573976 0.3232535 0.1640744 0.3073769 0.1640744 0.4142532 0.274823 0.4146403 0.2573976 0.2156026 0.2562359 0.3232535 0.1640744 0.3147343 0.161751 0.3073769 0.1640744 0.2156026 0.2562359 0.2113431 0.2651423 0.2148282 0.2752103 0.2148282 0.2752103 0.3038918 0.3638867 0.2156026 0.2562359 0.2156026 0.2562359 0.3038918 0.3638867 0.4142532 0.274823 0.5820217 0.1090576 0.5777621 0.1183511 0.5781493 0.1009256 0.5777621 0.1183511 0.4848262 0.211287 0.4674007 0.2074147 0.4848262 0.211287 0.477856 0.2132232 0.4674007 0.2074147 0.4674007 0.2074147 0.3783372 0.1187384 0.3791117 0.09976398 0.3783372 0.1187384 0.3748521 0.1086703 0.3791117 0.09976398 0.3791117 0.09976398 0.4708859 0.007602512 0.5781493 0.1009256 0.4674007 0.2074147 0.3791117 0.09976398 0.5777621 0.1183511 0.4708859 0.007602512 0.4782433 0.005279123 0.4867624 0.007602512 0.4867624 0.007602512 0.5781493 0.1009256 0.4708859 0.007602512 0.5820217 0.1090576 0.5820217 0.1090576 0.5781493 0.1009256 0.3783372 0.1187384 0.3783372 0.1187384 0.4674007 0.2074147 0.4708859 0.007602512 0.4708859 0.007602512 0.3791117 0.09976398 0.5781493 0.1009256 0.5781493 0.1009256 0.4867624 0.007602512 0.4674007 0.2074147 0.4674007 0.2074147 0.477856 0.2132232 0.4848262 0.211287 0.4848262 0.211287 0.5777621 0.1183511 0.3791117 0.09976398 0.3791117 0.09976398 0.3748521 0.1086703 0.4867624 0.007602512 0.4867624 0.007602512 0.4782433 0.005279123 0.477856 0.2132232 0.477856 0.2132232 0.4848262 0.211287 0.5777621 0.1183511 0.5777621 0.1183511 0.5820217 0.1090576 0.3748521 0.1086703 0.3748521 0.1086703 0.3783372 0.1187384 0.4782433 0.005279123 0.4782433 0.005279123 0.4708859 0.007602512</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-map-0-array" count="132" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="10">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-map-0" offset="2" set="0"/>
+          <p>10 0 0 11 1 1 0 2 2 0 2 42 1 28 43 10 0 44 1 28 45 2 1 46 3 29 47 7 30 48 3 29 49 6 1 50 3 29 51 4 1 52 6 1 53 1 28 54 3 29 55 7 30 56 4 1 57 5 1 58 6 1 59 7 30 60 8 31 61 9 32 62 9 32 63 10 0 64 7 30 65 7 30 66 10 0 67 1 28 68</p>
+        </triangles>
+        <triangles material="metal-material" count="34">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh-map-0" offset="2" set="0"/>
+          <p>13 3 3 19 4 4 15 5 5 2 6 6 15 7 7 3 8 8 9 9 9 22 10 10 10 10 11 6 11 12 19 12 13 7 13 14 3 8 15 16 14 16 4 15 17 10 10 18 23 16 19 11 17 20 0 18 21 13 19 22 1 20 23 7 13 24 20 21 25 8 22 26 4 15 27 17 23 28 5 24 29 11 17 30 12 25 31 0 18 32 1 20 33 14 26 34 2 6 35 8 22 36 21 9 37 9 9 38 5 24 39 18 27 40 6 11 41 14 33 69 13 3 70 15 5 71 13 3 72 12 34 73 22 35 74 12 34 75 23 33 76 22 35 77 22 35 78 21 36 79 19 4 80 21 36 81 20 37 82 19 4 83 19 4 84 18 33 85 15 5 86 22 35 87 19 4 88 13 3 89 18 33 90 17 33 91 16 33 92 16 33 93 15 5 94 18 33 95 2 6 96 14 26 97 15 7 98 9 9 99 21 9 100 22 10 101 6 11 102 18 27 103 19 12 104 3 8 105 15 7 106 16 14 107 10 10 108 22 10 109 23 16 110 0 18 111 12 25 112 13 19 113 7 13 114 19 12 115 20 21 116 4 15 117 16 14 118 17 23 119 11 17 120 23 16 121 12 25 122 1 20 123 13 19 124 14 26 125 8 22 126 20 21 127 21 9 128 5 24 129 17 23 130 18 27 131</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.021">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-positions-array" count="72">0.006808817 0.102294 0.002011656 0.09974473 0.009358048 0.002011656 0.1040043 6.4522e-5 0.002011656 0.1001319 -0.008067369 0.002011656 0.008745014 -0.1013905 0.002011656 2.25876e-4 -0.1037139 0.002011656 -0.007131516 -0.1013905 0.002011656 -0.09890574 -0.009229004 0.002011656 -0.1031653 -3.227e-4 0.002011656 -0.09968018 0.009745359 0.002011656 -0.0106166 0.09842169 0.002011656 -1.61339e-4 0.1042302 0.002011656 0.006808817 0.102294 -0.002011656 0.09974473 0.009358048 -0.002011656 0.1040043 6.4522e-5 -0.002011656 0.1001319 -0.008067369 -0.002011656 0.008745014 -0.1013905 -0.002011656 2.25876e-4 -0.1037139 -0.002011656 -0.007131516 -0.1013905 -0.002011656 -0.09890574 -0.009229004 -0.002011656 -0.1031653 -3.227e-4 -0.002011656 -0.09968018 0.009745359 -0.002011656 -0.0106166 0.09842169 -0.002011656 -1.61339e-4 0.1042302 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-normals-array" count="114">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.9999732 0.007328391 0 -0.8198378 0.5725958 0 -0.8198378 0.5725959 0 0.8470366 -0.5315346 0 0.6013256 -0.7990041 0 0.5198636 0.8542493 0 0.8169461 0.576714 0 0.8169463 0.5767139 0 -0.5064523 0.862268 0 -0.5064522 0.8622682 0 0.1178013 -0.9930373 0 0.1178013 -0.9930372 0 -0.5039564 -0.8637291 0 -0.821031 -0.5708837 0 -0.8210312 -0.5708835 0 0.9984081 0.05640125 0 0.9984083 0.05640125 0 0.0198127 0.9998038 0 0.0198127 0.9998038 0 -0.5039563 -0.8637292 0 -0.9999732 0.007328212 0 0.5198634 0.8542495 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-normals-array" count="38" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-map-0-array" count="264">0.3150683 0.5882459 0.3255236 0.5940544 0.3324938 0.5921182 0.5777621 0.1183511 0.3791117 0.09976398 0.5781493 0.1009256 0.5820217 0.1090576 0.5781493 0.1009256 0.5781493 0.1009256 0.3783372 0.1187384 0.4674007 0.2074147 0.4674007 0.2074147 0.4708859 0.007602512 0.3791117 0.09976398 0.3791117 0.09976398 0.5781493 0.1009256 0.4867624 0.007602512 0.4867624 0.007602512 0.4674007 0.2074147 0.477856 0.2132232 0.477856 0.2132232 0.4848262 0.211287 0.5777621 0.1183511 0.5777621 0.1183511 0.3791117 0.09976398 0.3748521 0.1086703 0.3748521 0.1086703 0.4867624 0.007602512 0.4782433 0.005279123 0.4782433 0.005279123 0.477856 0.2132232 0.4848262 0.211287 0.4848262 0.211287 0.5777621 0.1183511 0.5820217 0.1090576 0.5820217 0.1090576 0.3748521 0.1086703 0.3783372 0.1187384 0.3783372 0.1187384 0.4782433 0.005279123 0.4708859 0.007602512 0.4708859 0.007602512 0.3324938 0.5921182 0.4254297 0.4991822 0.3150683 0.5882459 0.4254297 0.4991822 0.4296893 0.4898887 0.4258168 0.4817568 0.2267792 0.4805951 0.4258168 0.4817568 0.3185535 0.3884336 0.4258168 0.4817568 0.33443 0.3884336 0.3185535 0.3884336 0.4254297 0.4991822 0.4258168 0.4817568 0.2267792 0.4805951 0.33443 0.3884336 0.3259109 0.3861103 0.3185535 0.3884336 0.2267792 0.4805951 0.2225196 0.4895015 0.2260048 0.4995695 0.2260048 0.4995695 0.3150683 0.5882459 0.2267792 0.4805951 0.2267792 0.4805951 0.3150683 0.5882459 0.4254297 0.4991822 0.5820217 0.1090576 0.5777621 0.1183511 0.5781493 0.1009256 0.5777621 0.1183511 0.4848262 0.211287 0.4674007 0.2074147 0.4848262 0.211287 0.477856 0.2132232 0.4674007 0.2074147 0.4674007 0.2074147 0.3783372 0.1187384 0.3791117 0.09976398 0.3783372 0.1187384 0.3748521 0.1086703 0.3791117 0.09976398 0.3791117 0.09976398 0.4708859 0.007602512 0.5781493 0.1009256 0.4674007 0.2074147 0.3791117 0.09976398 0.5777621 0.1183511 0.4708859 0.007602512 0.4782433 0.005279123 0.4867624 0.007602512 0.4867624 0.007602512 0.5781493 0.1009256 0.4708859 0.007602512 0.5820217 0.1090576 0.5820217 0.1090576 0.5781493 0.1009256 0.3783372 0.1187384 0.3783372 0.1187384 0.4674007 0.2074147 0.4708859 0.007602512 0.4708859 0.007602512 0.3791117 0.09976398 0.5781493 0.1009256 0.5781493 0.1009256 0.4867624 0.007602512 0.4674007 0.2074147 0.4674007 0.2074147 0.477856 0.2132232 0.4848262 0.211287 0.4848262 0.211287 0.5777621 0.1183511 0.3791117 0.09976398 0.3791117 0.09976398 0.3748521 0.1086703 0.4867624 0.007602512 0.4867624 0.007602512 0.4782433 0.005279123 0.477856 0.2132232 0.477856 0.2132232 0.4848262 0.211287 0.5777621 0.1183511 0.5777621 0.1183511 0.5820217 0.1090576 0.3748521 0.1086703 0.3748521 0.1086703 0.3783372 0.1187384 0.4782433 0.005279123 0.4782433 0.005279123 0.4708859 0.007602512</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-map-0-array" count="132" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="10">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-map-0" offset="2" set="0"/>
+          <p>10 0 0 11 1 1 0 2 2 0 2 42 1 28 43 10 0 44 1 28 45 2 1 46 3 29 47 7 30 48 3 29 49 6 1 50 3 29 51 4 1 52 6 1 53 1 28 54 3 29 55 7 30 56 4 1 57 5 1 58 6 1 59 7 30 60 8 31 61 9 32 62 9 32 63 10 0 64 7 30 65 7 30 66 10 0 67 1 28 68</p>
+        </triangles>
+        <triangles material="metal-material" count="34">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh-map-0" offset="2" set="0"/>
+          <p>13 3 3 19 4 4 15 5 5 2 6 6 15 7 7 3 8 8 9 9 9 22 10 10 10 10 11 6 11 12 19 12 13 7 13 14 3 8 15 16 14 16 4 15 17 10 10 18 23 16 19 11 17 20 0 18 21 13 19 22 1 20 23 7 13 24 20 21 25 8 22 26 4 15 27 17 23 28 5 24 29 11 17 30 12 25 31 0 18 32 1 20 33 14 26 34 2 6 35 8 22 36 21 9 37 9 9 38 5 24 39 18 27 40 6 11 41 14 33 69 13 3 70 15 5 71 13 3 72 12 34 73 22 35 74 12 34 75 23 33 76 22 35 77 22 35 78 21 36 79 19 4 80 21 36 81 20 37 82 19 4 83 19 4 84 18 33 85 15 5 86 22 35 87 19 4 88 13 3 89 18 33 90 17 33 91 16 33 92 16 33 93 15 5 94 18 33 95 2 6 96 14 26 97 15 7 98 9 9 99 21 9 100 22 10 101 6 11 102 18 27 103 19 12 104 3 8 105 15 7 106 16 14 107 10 10 108 22 10 109 23 16 110 0 18 111 12 25 112 13 19 113 7 13 114 19 12 115 20 21 116 4 15 117 16 14 118 17 23 119 11 17 120 23 16 121 12 25 122 1 20 123 13 19 124 14 26 125 8 22 126 20 21 127 21 9 128 5 24 129 17 23 130 18 27 131</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.020">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-positions-array" count="72">0.006808817 0.102294 0.002011656 0.09974473 0.009358048 0.002011656 0.1040043 6.4522e-5 0.002011656 0.1001319 -0.008067369 0.002011656 0.008745014 -0.1013905 0.002011656 2.25876e-4 -0.1037139 0.002011656 -0.007131516 -0.1013905 0.002011656 -0.09890574 -0.009229004 0.002011656 -0.1031653 -3.227e-4 0.002011656 -0.09968018 0.009745359 0.002011656 -0.0106166 0.09842169 0.002011656 -1.61339e-4 0.1042302 0.002011656 0.006808817 0.102294 -0.002011656 0.09974473 0.009358048 -0.002011656 0.1040043 6.4522e-5 -0.002011656 0.1001319 -0.008067369 -0.002011656 0.008745014 -0.1013905 -0.002011656 2.25876e-4 -0.1037139 -0.002011656 -0.007131516 -0.1013905 -0.002011656 -0.09890574 -0.009229004 -0.002011656 -0.1031653 -3.227e-4 -0.002011656 -0.09968018 0.009745359 -0.002011656 -0.0106166 0.09842169 -0.002011656 -1.61339e-4 0.1042302 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-normals-array" count="114">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.9999732 0.007328391 0 -0.8198378 0.5725958 0 -0.8198378 0.5725959 0 0.8470366 -0.5315346 0 0.6013256 -0.7990041 0 0.5198636 0.8542493 0 0.8169461 0.576714 0 0.8169463 0.5767139 0 -0.5064523 0.862268 0 -0.5064522 0.8622682 0 0.1178013 -0.9930373 0 0.1178013 -0.9930372 0 -0.5039564 -0.8637291 0 -0.821031 -0.5708837 0 -0.8210312 -0.5708835 0 0.9984081 0.05640125 0 0.9984083 0.05640125 0 0.0198127 0.9998038 0 0.0198127 0.9998038 0 -0.5039563 -0.8637292 0 -0.9999732 0.007328212 0 0.5198634 0.8542495 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-normals-array" count="38" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-map-0-array" count="264">0.5170744 0.4574387 0.5275297 0.4632471 0.5344999 0.461311 0.5777621 0.1183511 0.3791117 0.09976398 0.5781493 0.1009256 0.5820217 0.1090576 0.5781493 0.1009256 0.5781493 0.1009256 0.3783372 0.1187384 0.4674007 0.2074147 0.4674007 0.2074147 0.4708859 0.007602512 0.3791117 0.09976398 0.3791117 0.09976398 0.5781493 0.1009256 0.4867624 0.007602512 0.4867624 0.007602512 0.4674007 0.2074147 0.477856 0.2132232 0.477856 0.2132232 0.4848262 0.211287 0.5777621 0.1183511 0.5777621 0.1183511 0.3791117 0.09976398 0.3748521 0.1086703 0.3748521 0.1086703 0.4867624 0.007602512 0.4782433 0.005279123 0.4782433 0.005279123 0.477856 0.2132232 0.4848262 0.211287 0.4848262 0.211287 0.5777621 0.1183511 0.5820217 0.1090576 0.5820217 0.1090576 0.3748521 0.1086703 0.3783372 0.1187384 0.3783372 0.1187384 0.4782433 0.005279123 0.4708859 0.007602512 0.4708859 0.007602512 0.5344999 0.461311 0.6274358 0.368375 0.5170744 0.4574387 0.6274358 0.368375 0.6316954 0.3590815 0.6278229 0.3509496 0.4287853 0.3497879 0.6278229 0.3509496 0.5205596 0.2576264 0.6278229 0.3509496 0.5364361 0.2576264 0.5205596 0.2576264 0.6274358 0.368375 0.6278229 0.3509496 0.4287853 0.3497879 0.5364361 0.2576264 0.527917 0.255303 0.5205596 0.2576264 0.4287853 0.3497879 0.4245257 0.3586943 0.4280109 0.3687623 0.4280109 0.3687623 0.5170744 0.4574387 0.4287853 0.3497879 0.4287853 0.3497879 0.5170744 0.4574387 0.6274358 0.368375 0.5820217 0.1090576 0.5777621 0.1183511 0.5781493 0.1009256 0.5777621 0.1183511 0.4848262 0.211287 0.4674007 0.2074147 0.4848262 0.211287 0.477856 0.2132232 0.4674007 0.2074147 0.4674007 0.2074147 0.3783372 0.1187384 0.3791117 0.09976398 0.3783372 0.1187384 0.3748521 0.1086703 0.3791117 0.09976398 0.3791117 0.09976398 0.4708859 0.007602512 0.5781493 0.1009256 0.4674007 0.2074147 0.3791117 0.09976398 0.5777621 0.1183511 0.4708859 0.007602512 0.4782433 0.005279123 0.4867624 0.007602512 0.4867624 0.007602512 0.5781493 0.1009256 0.4708859 0.007602512 0.5820217 0.1090576 0.5820217 0.1090576 0.5781493 0.1009256 0.3783372 0.1187384 0.3783372 0.1187384 0.4674007 0.2074147 0.4708859 0.007602512 0.4708859 0.007602512 0.3791117 0.09976398 0.5781493 0.1009256 0.5781493 0.1009256 0.4867624 0.007602512 0.4674007 0.2074147 0.4674007 0.2074147 0.477856 0.2132232 0.4848262 0.211287 0.4848262 0.211287 0.5777621 0.1183511 0.3791117 0.09976398 0.3791117 0.09976398 0.3748521 0.1086703 0.4867624 0.007602512 0.4867624 0.007602512 0.4782433 0.005279123 0.477856 0.2132232 0.477856 0.2132232 0.4848262 0.211287 0.5777621 0.1183511 0.5777621 0.1183511 0.5820217 0.1090576 0.3748521 0.1086703 0.3748521 0.1086703 0.3783372 0.1187384 0.4782433 0.005279123 0.4782433 0.005279123 0.4708859 0.007602512</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-map-0-array" count="132" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="10">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-map-0" offset="2" set="0"/>
+          <p>10 0 0 11 1 1 0 2 2 0 2 42 1 28 43 10 0 44 1 28 45 2 1 46 3 29 47 7 30 48 3 29 49 6 1 50 3 29 51 4 1 52 6 1 53 1 28 54 3 29 55 7 30 56 4 1 57 5 1 58 6 1 59 7 30 60 8 31 61 9 32 62 9 32 63 10 0 64 7 30 65 7 30 66 10 0 67 1 28 68</p>
+        </triangles>
+        <triangles material="metal-material" count="34">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh-map-0" offset="2" set="0"/>
+          <p>13 3 3 19 4 4 15 5 5 2 6 6 15 7 7 3 8 8 9 9 9 22 10 10 10 10 11 6 11 12 19 12 13 7 13 14 3 8 15 16 14 16 4 15 17 10 10 18 23 16 19 11 17 20 0 18 21 13 19 22 1 20 23 7 13 24 20 21 25 8 22 26 4 15 27 17 23 28 5 24 29 11 17 30 12 25 31 0 18 32 1 20 33 14 26 34 2 6 35 8 22 36 21 9 37 9 9 38 5 24 39 18 27 40 6 11 41 14 33 69 13 3 70 15 5 71 13 3 72 12 34 73 22 35 74 12 34 75 23 33 76 22 35 77 22 35 78 21 36 79 19 4 80 21 36 81 20 37 82 19 4 83 19 4 84 18 33 85 15 5 86 22 35 87 19 4 88 13 3 89 18 33 90 17 33 91 16 33 92 16 33 93 15 5 94 18 33 95 2 6 96 14 26 97 15 7 98 9 9 99 21 9 100 22 10 101 6 11 102 18 27 103 19 12 104 3 8 105 15 7 106 16 14 107 10 10 108 22 10 109 23 16 110 0 18 111 12 25 112 13 19 113 7 13 114 19 12 115 20 21 116 4 15 117 16 14 118 17 23 119 11 17 120 23 16 121 12 25 122 1 20 123 13 19 124 14 26 125 8 22 126 20 21 127 21 9 128 5 24 129 17 23 130 18 27 131</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.019">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-positions-array" count="54">-0.009962558 0.1084113 0.002011656 -0.002196431 0.1119413 0.002011656 0.01051163 0.1077053 0.002011656 0.09664458 -0.04691028 0.002011656 0.09735059 -0.0567944 0.002011656 0.08817243 -0.06385445 0.002011656 -0.08621138 -0.06314843 0.002011656 -0.09821349 -0.0567944 0.002011656 -0.0960955 -0.04055619 0.002011656 -0.009962558 0.1084113 -0.002011656 -0.002196431 0.1119413 -0.002011656 0.01051163 0.1077053 -0.002011656 0.09664458 -0.04691028 -0.002011656 0.09735059 -0.0567944 -0.002011656 0.08817243 -0.06385445 -0.002011656 -0.08621138 -0.06314843 -0.002011656 -0.09821349 -0.0567944 -0.002011656 -0.0960955 -0.04055619 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-positions-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-normals-array" count="99">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.9123129 0.4094938 0 -0.3200874 0.947388 0 -0.320087 0.9473882 0 0.05241441 -0.9986254 0 -0.6381895 -0.7698795 0 -0.6381894 -0.7698794 0 0.9470205 -0.3211733 0 0.6717704 -0.7407594 0 0.6717701 -0.7407598 0 0.2430151 0.9700226 0 0.2430154 0.9700224 0 -0.9583058 -0.2857447 0 -0.9583058 -0.2857447 0 0.4678862 0.8837887 0 0.4678861 0.8837888 0 -0.9123129 0.4094938 0 0.05241441 -0.9986254 0 0.9916008 -0.129337 0 0.9470205 -0.321173 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0.9916007 -0.129337 0</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-normals-array" count="33" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-map-0-array" count="192">0.2073922 0.3569912 0.01465207 0.3633453 0.02312421 0.3802896 0.2007321 0.7985747 0.2092042 0.8155189 0.01646411 0.821873 0.2099102 0.8056347 0.2007321 0.7985747 0.2007321 0.7985747 0.1103632 0.9743706 0.1230713 0.9701345 0.1230713 0.9701345 0.01646411 0.821873 0.102597 0.9708405 0.102597 0.9708405 0.2007321 0.7985747 0.02634823 0.7992808 0.02634823 0.7992808 0.1230713 0.9701345 0.2092042 0.8155189 0.2092042 0.8155189 0.02634823 0.7992808 0.01434612 0.8056347 0.01434612 0.8056347 0.2092042 0.8155189 0.2099102 0.8056347 0.2099102 0.8056347 0.102597 0.9708405 0.1103632 0.9743706 0.1103632 0.9743706 0.01434612 0.8056347 0.01646411 0.821873 0.01646411 0.821873 0.197508 0.3795835 0.2095102 0.3732295 0.2073922 0.3569912 0.2073922 0.3569912 0.1212592 0.2080237 0.100785 0.2087298 0.1212592 0.2080237 0.1134931 0.2044937 0.100785 0.2087298 0.100785 0.2087298 0.01465207 0.3633453 0.2073922 0.3569912 0.01465207 0.3633453 0.01394605 0.3732295 0.02312421 0.3802896 0.02312421 0.3802896 0.197508 0.3795835 0.2073922 0.3569912 0.01646411 0.821873 0.01434612 0.8056347 0.02634823 0.7992808 0.02634823 0.7992808 0.2007321 0.7985747 0.01646411 0.821873 0.2007321 0.7985747 0.2099102 0.8056347 0.2092042 0.8155189 0.2092042 0.8155189 0.1230713 0.9701345 0.01646411 0.821873 0.1230713 0.9701345 0.1103632 0.9743706 0.102597 0.9708405 0.102597 0.9708405 0.01646411 0.821873 0.1230713 0.9701345 0.2099102 0.8056347 0.2099102 0.8056347 0.2007321 0.7985747 0.1103632 0.9743706 0.1103632 0.9743706 0.1230713 0.9701345 0.01646411 0.821873 0.01646411 0.821873 0.102597 0.9708405 0.2007321 0.7985747 0.2007321 0.7985747 0.02634823 0.7992808 0.1230713 0.9701345 0.1230713 0.9701345 0.2092042 0.8155189 0.02634823 0.7992808 0.02634823 0.7992808 0.01434612 0.8056347 0.2092042 0.8155189 0.2092042 0.8155189 0.2099102 0.8056347 0.102597 0.9708405 0.102597 0.9708405 0.1103632 0.9743706 0.01434612 0.8056347 0.01434612 0.8056347 0.01646411 0.821873</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-map-0-array" count="96" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="7">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-map-0" offset="2" set="0"/>
+          <p>8 0 0 3 1 1 5 2 2 6 25 33 7 26 34 8 0 35 8 0 36 0 27 37 2 28 38 0 27 39 1 29 40 2 28 41 2 28 42 3 1 43 8 0 44 3 1 45 4 30 46 5 2 47 5 2 48 6 25 49 8 0 50</p>
+        </triangles>
+        <triangles material="metal-material" count="25">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh-map-0" offset="2" set="0"/>
+          <p>14 3 3 12 4 4 17 5 5 4 6 6 14 7 7 5 8 8 1 9 9 11 10 10 2 11 11 8 12 12 9 13 13 0 14 14 5 8 15 15 15 16 6 16 17 2 11 18 12 17 19 3 18 20 6 16 21 16 19 22 7 20 23 3 18 24 13 21 25 4 6 26 0 14 27 10 22 28 1 9 29 7 23 30 17 24 31 8 12 32 17 5 51 16 4 52 15 31 53 15 31 54 14 3 55 17 5 56 14 3 57 13 4 58 12 4 59 12 4 60 11 4 61 17 5 62 11 4 63 10 4 64 9 4 65 9 4 66 17 5 67 11 4 68 4 6 69 13 21 70 14 7 71 1 9 72 10 22 73 11 10 74 8 12 75 17 24 76 9 13 77 5 8 78 14 7 79 15 15 80 2 11 81 11 10 82 12 17 83 6 16 84 15 15 85 16 19 86 3 18 87 12 17 88 13 21 89 0 14 90 9 13 91 10 22 92 7 23 93 16 32 94 17 24 95</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.018">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-positions-array" count="54">-0.009962558 0.1084113 0.002011656 -0.002196431 0.1119413 0.002011656 0.01051163 0.1077053 0.002011656 0.09664458 -0.04691028 0.002011656 0.09735059 -0.0567944 0.002011656 0.08817243 -0.06385445 0.002011656 -0.08621138 -0.06314843 0.002011656 -0.09821349 -0.0567944 0.002011656 -0.0960955 -0.04055619 0.002011656 -0.009962558 0.1084113 -0.002011656 -0.002196431 0.1119413 -0.002011656 0.01051163 0.1077053 -0.002011656 0.09664458 -0.04691028 -0.002011656 0.09735059 -0.0567944 -0.002011656 0.08817243 -0.06385445 -0.002011656 -0.08621138 -0.06314843 -0.002011656 -0.09821349 -0.0567944 -0.002011656 -0.0960955 -0.04055619 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-positions-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-normals-array" count="99">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.9123129 0.4094938 0 -0.3200874 0.947388 0 -0.320087 0.9473882 0 0.05241441 -0.9986254 0 -0.6381895 -0.7698795 0 -0.6381894 -0.7698794 0 0.9470205 -0.3211733 0 0.6717704 -0.7407594 0 0.6717701 -0.7407598 0 0.2430151 0.9700226 0 0.2430154 0.9700224 0 -0.9583058 -0.2857447 0 -0.9583058 -0.2857447 0 0.4678862 0.8837887 0 0.4678861 0.8837888 0 -0.9123129 0.4094938 0 0.05241441 -0.9986254 0 0.9916008 -0.129337 0 0.9470205 -0.321173 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0.9916007 -0.129337 0</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-normals-array" count="33" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-map-0-array" count="192">0.01606404 0.03489273 0.2088041 0.02853864 0.200332 0.01159441 0.2007321 0.7985747 0.2092042 0.8155189 0.01646411 0.821873 0.2099102 0.8056347 0.2007321 0.7985747 0.2007321 0.7985747 0.1103632 0.9743706 0.1230713 0.9701345 0.1230713 0.9701345 0.01646411 0.821873 0.102597 0.9708405 0.102597 0.9708405 0.2007321 0.7985747 0.02634823 0.7992808 0.02634823 0.7992808 0.1230713 0.9701345 0.2092042 0.8155189 0.2092042 0.8155189 0.02634823 0.7992808 0.01434612 0.8056347 0.01434612 0.8056347 0.2092042 0.8155189 0.2099102 0.8056347 0.2099102 0.8056347 0.102597 0.9708405 0.1103632 0.9743706 0.1103632 0.9743706 0.01434612 0.8056347 0.01646411 0.821873 0.01646411 0.821873 0.02594816 0.01230049 0.01394605 0.01865446 0.01606404 0.03489273 0.01606404 0.03489273 0.1021969 0.1838603 0.1226712 0.1831542 0.1021969 0.1838603 0.1099631 0.1873903 0.1226712 0.1831542 0.1226712 0.1831542 0.2088041 0.02853864 0.01606404 0.03489273 0.2088041 0.02853864 0.2095102 0.01865446 0.200332 0.01159441 0.200332 0.01159441 0.02594816 0.01230049 0.01606404 0.03489273 0.01646411 0.821873 0.01434612 0.8056347 0.02634823 0.7992808 0.02634823 0.7992808 0.2007321 0.7985747 0.01646411 0.821873 0.2007321 0.7985747 0.2099102 0.8056347 0.2092042 0.8155189 0.2092042 0.8155189 0.1230713 0.9701345 0.01646411 0.821873 0.1230713 0.9701345 0.1103632 0.9743706 0.102597 0.9708405 0.102597 0.9708405 0.01646411 0.821873 0.1230713 0.9701345 0.2099102 0.8056347 0.2099102 0.8056347 0.2007321 0.7985747 0.1103632 0.9743706 0.1103632 0.9743706 0.1230713 0.9701345 0.01646411 0.821873 0.01646411 0.821873 0.102597 0.9708405 0.2007321 0.7985747 0.2007321 0.7985747 0.02634823 0.7992808 0.1230713 0.9701345 0.1230713 0.9701345 0.2092042 0.8155189 0.02634823 0.7992808 0.02634823 0.7992808 0.01434612 0.8056347 0.2092042 0.8155189 0.2092042 0.8155189 0.2099102 0.8056347 0.102597 0.9708405 0.102597 0.9708405 0.1103632 0.9743706 0.01434612 0.8056347 0.01434612 0.8056347 0.01646411 0.821873</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-map-0-array" count="96" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="7">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-map-0" offset="2" set="0"/>
+          <p>8 0 0 3 1 1 5 2 2 6 25 33 7 26 34 8 0 35 8 0 36 0 27 37 2 28 38 0 27 39 1 29 40 2 28 41 2 28 42 3 1 43 8 0 44 3 1 45 4 30 46 5 2 47 5 2 48 6 25 49 8 0 50</p>
+        </triangles>
+        <triangles material="metal-material" count="25">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh-map-0" offset="2" set="0"/>
+          <p>14 3 3 12 4 4 17 5 5 4 6 6 14 7 7 5 8 8 1 9 9 11 10 10 2 11 11 8 12 12 9 13 13 0 14 14 5 8 15 15 15 16 6 16 17 2 11 18 12 17 19 3 18 20 6 16 21 16 19 22 7 20 23 3 18 24 13 21 25 4 6 26 0 14 27 10 22 28 1 9 29 7 23 30 17 24 31 8 12 32 17 5 51 16 4 52 15 31 53 15 31 54 14 3 55 17 5 56 14 3 57 13 4 58 12 4 59 12 4 60 11 4 61 17 5 62 11 4 63 10 4 64 9 4 65 9 4 66 17 5 67 11 4 68 4 6 69 13 21 70 14 7 71 1 9 72 10 22 73 11 10 74 8 12 75 17 24 76 9 13 77 5 8 78 14 7 79 15 15 80 2 11 81 11 10 82 12 17 83 6 16 84 15 15 85 16 19 86 3 18 87 12 17 88 13 21 89 0 14 90 9 13 91 10 22 92 7 23 93 16 32 94 17 24 95</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.017">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-positions-array" count="54">-0.009962558 0.1084113 0.002011656 -0.002196431 0.1119413 0.002011656 0.01051163 0.1077053 0.002011656 0.09664458 -0.04691028 0.002011656 0.09735059 -0.0567944 0.002011656 0.08817243 -0.06385445 0.002011656 -0.08621138 -0.06314843 0.002011656 -0.09821349 -0.0567944 0.002011656 -0.0960955 -0.04055619 0.002011656 -0.009962558 0.1084113 -0.002011656 -0.002196431 0.1119413 -0.002011656 0.01051163 0.1077053 -0.002011656 0.09664458 -0.04691028 -0.002011656 0.09735059 -0.0567944 -0.002011656 0.08817243 -0.06385445 -0.002011656 -0.08621138 -0.06314843 -0.002011656 -0.09821349 -0.0567944 -0.002011656 -0.0960955 -0.04055619 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-positions-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-normals-array" count="99">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.9123129 0.4094938 0 -0.3200874 0.947388 0 -0.320087 0.9473882 0 0.05241441 -0.9986254 0 -0.6381895 -0.7698795 0 -0.6381894 -0.7698794 0 0.9470205 -0.3211733 0 0.6717704 -0.7407594 0 0.6717701 -0.7407598 0 0.2430151 0.9700226 0 0.2430154 0.9700224 0 -0.9583058 -0.2857447 0 -0.9583058 -0.2857447 0 0.4678862 0.8837887 0 0.4678861 0.8837888 0 -0.9123129 0.4094938 0 0.05241441 -0.9986254 0 0.9916008 -0.129337 0 0.9470205 -0.321173 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0.9916007 -0.129337 0</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-normals-array" count="33" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-map-0-array" count="192">0.01939076 0.4292145 0.2121309 0.4228605 0.2036587 0.4059162 0.2007321 0.7985747 0.2092042 0.8155189 0.01646411 0.821873 0.2099102 0.8056347 0.2007321 0.7985747 0.2007321 0.7985747 0.1103632 0.9743706 0.1230713 0.9701345 0.1230713 0.9701345 0.01646411 0.821873 0.102597 0.9708405 0.102597 0.9708405 0.2007321 0.7985747 0.02634823 0.7992808 0.02634823 0.7992808 0.1230713 0.9701345 0.2092042 0.8155189 0.2092042 0.8155189 0.02634823 0.7992808 0.01434612 0.8056347 0.01434612 0.8056347 0.2092042 0.8155189 0.2099102 0.8056347 0.2099102 0.8056347 0.102597 0.9708405 0.1103632 0.9743706 0.1103632 0.9743706 0.01434612 0.8056347 0.01646411 0.821873 0.01646411 0.821873 0.02927488 0.4066223 0.01727277 0.4129763 0.01939076 0.4292145 0.01939076 0.4292145 0.1055237 0.5781821 0.1259979 0.577476 0.1055237 0.5781821 0.1132898 0.5817121 0.1259979 0.577476 0.1259979 0.577476 0.2121309 0.4228605 0.01939076 0.4292145 0.2121309 0.4228605 0.2128369 0.4129763 0.2036587 0.4059162 0.2036587 0.4059162 0.02927488 0.4066223 0.01939076 0.4292145 0.01646411 0.821873 0.01434612 0.8056347 0.02634823 0.7992808 0.02634823 0.7992808 0.2007321 0.7985747 0.01646411 0.821873 0.2007321 0.7985747 0.2099102 0.8056347 0.2092042 0.8155189 0.2092042 0.8155189 0.1230713 0.9701345 0.01646411 0.821873 0.1230713 0.9701345 0.1103632 0.9743706 0.102597 0.9708405 0.102597 0.9708405 0.01646411 0.821873 0.1230713 0.9701345 0.2099102 0.8056347 0.2099102 0.8056347 0.2007321 0.7985747 0.1103632 0.9743706 0.1103632 0.9743706 0.1230713 0.9701345 0.01646411 0.821873 0.01646411 0.821873 0.102597 0.9708405 0.2007321 0.7985747 0.2007321 0.7985747 0.02634823 0.7992808 0.1230713 0.9701345 0.1230713 0.9701345 0.2092042 0.8155189 0.02634823 0.7992808 0.02634823 0.7992808 0.01434612 0.8056347 0.2092042 0.8155189 0.2092042 0.8155189 0.2099102 0.8056347 0.102597 0.9708405 0.102597 0.9708405 0.1103632 0.9743706 0.01434612 0.8056347 0.01434612 0.8056347 0.01646411 0.821873</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-map-0-array" count="96" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="7">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-map-0" offset="2" set="0"/>
+          <p>8 0 0 3 1 1 5 2 2 6 25 33 7 26 34 8 0 35 8 0 36 0 27 37 2 28 38 0 27 39 1 29 40 2 28 41 2 28 42 3 1 43 8 0 44 3 1 45 4 30 46 5 2 47 5 2 48 6 25 49 8 0 50</p>
+        </triangles>
+        <triangles material="metal-material" count="25">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh-map-0" offset="2" set="0"/>
+          <p>14 3 3 12 4 4 17 5 5 4 6 6 14 7 7 5 8 8 1 9 9 11 10 10 2 11 11 8 12 12 9 13 13 0 14 14 5 8 15 15 15 16 6 16 17 2 11 18 12 17 19 3 18 20 6 16 21 16 19 22 7 20 23 3 18 24 13 21 25 4 6 26 0 14 27 10 22 28 1 9 29 7 23 30 17 24 31 8 12 32 17 5 51 16 4 52 15 31 53 15 31 54 14 3 55 17 5 56 14 3 57 13 4 58 12 4 59 12 4 60 11 4 61 17 5 62 11 4 63 10 4 64 9 4 65 9 4 66 17 5 67 11 4 68 4 6 69 13 21 70 14 7 71 1 9 72 10 22 73 11 10 74 8 12 75 17 24 76 9 13 77 5 8 78 14 7 79 15 15 80 2 11 81 11 10 82 12 17 83 6 16 84 15 15 85 16 19 86 3 18 87 12 17 88 13 21 89 0 14 90 9 13 91 10 22 92 7 23 93 16 32 94 17 24 95</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.015">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-positions-array" count="54">-0.009962558 0.1084113 0.002011656 -0.002196431 0.1119413 0.002011656 0.01051163 0.1077053 0.002011656 0.09664458 -0.04691028 0.002011656 0.09735059 -0.0567944 0.002011656 0.08817243 -0.06385445 0.002011656 -0.08621138 -0.06314843 0.002011656 -0.09821349 -0.0567944 0.002011656 -0.0960955 -0.04055619 0.002011656 -0.009962558 0.1084113 -0.002011656 -0.002196431 0.1119413 -0.002011656 0.01051163 0.1077053 -0.002011656 0.09664458 -0.04691028 -0.002011656 0.09735059 -0.0567944 -0.002011656 0.08817243 -0.06385445 -0.002011656 -0.08621138 -0.06314843 -0.002011656 -0.09821349 -0.0567944 -0.002011656 -0.0960955 -0.04055619 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-positions-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-normals-array" count="99">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.9123129 0.4094938 0 -0.3200874 0.947388 0 -0.320087 0.9473882 0 0.05241441 -0.9986254 0 -0.6381895 -0.7698795 0 -0.6381894 -0.7698794 0 0.9470205 -0.3211733 0 0.6717704 -0.7407594 0 0.6717701 -0.7407598 0 0.2430151 0.9700226 0 0.2430154 0.9700224 0 -0.9583058 -0.2857447 0 -0.9583058 -0.2857447 0 0.4678862 0.8837887 0 0.4678861 0.8837888 0 -0.9123129 0.4094938 0 0.05241441 -0.9986254 0 0.9916008 -0.129337 0 0.9470205 -0.321173 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0.9916007 -0.129337 0</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-normals-array" count="33" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-map-0-array" count="192">0.01646411 0.6287143 0.2092042 0.6223602 0.2007321 0.605416 0.2007321 0.7985747 0.2092042 0.8155189 0.01646411 0.821873 0.2099102 0.8056347 0.2007321 0.7985747 0.2007321 0.7985747 0.1103632 0.9743706 0.1230713 0.9701345 0.1230713 0.9701345 0.01646411 0.821873 0.102597 0.9708405 0.102597 0.9708405 0.2007321 0.7985747 0.02634823 0.7992808 0.02634823 0.7992808 0.1230713 0.9701345 0.2092042 0.8155189 0.2092042 0.8155189 0.02634823 0.7992808 0.01434612 0.8056347 0.01434612 0.8056347 0.2092042 0.8155189 0.2099102 0.8056347 0.2099102 0.8056347 0.102597 0.9708405 0.1103632 0.9743706 0.1103632 0.9743706 0.01434612 0.8056347 0.01646411 0.821873 0.01646411 0.821873 0.02634823 0.6061221 0.01434612 0.6124761 0.01646411 0.6287143 0.01646411 0.6287143 0.102597 0.7776818 0.1230713 0.7769758 0.102597 0.7776818 0.1103632 0.7812119 0.1230713 0.7769758 0.1230713 0.7769758 0.2092042 0.6223602 0.01646411 0.6287143 0.2092042 0.6223602 0.2099102 0.6124761 0.2007321 0.605416 0.2007321 0.605416 0.02634823 0.6061221 0.01646411 0.6287143 0.01646411 0.821873 0.01434612 0.8056347 0.02634823 0.7992808 0.02634823 0.7992808 0.2007321 0.7985747 0.01646411 0.821873 0.2007321 0.7985747 0.2099102 0.8056347 0.2092042 0.8155189 0.2092042 0.8155189 0.1230713 0.9701345 0.01646411 0.821873 0.1230713 0.9701345 0.1103632 0.9743706 0.102597 0.9708405 0.102597 0.9708405 0.01646411 0.821873 0.1230713 0.9701345 0.2099102 0.8056347 0.2099102 0.8056347 0.2007321 0.7985747 0.1103632 0.9743706 0.1103632 0.9743706 0.1230713 0.9701345 0.01646411 0.821873 0.01646411 0.821873 0.102597 0.9708405 0.2007321 0.7985747 0.2007321 0.7985747 0.02634823 0.7992808 0.1230713 0.9701345 0.1230713 0.9701345 0.2092042 0.8155189 0.02634823 0.7992808 0.02634823 0.7992808 0.01434612 0.8056347 0.2092042 0.8155189 0.2092042 0.8155189 0.2099102 0.8056347 0.102597 0.9708405 0.102597 0.9708405 0.1103632 0.9743706 0.01434612 0.8056347 0.01434612 0.8056347 0.01646411 0.821873</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-map-0-array" count="96" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="7">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-map-0" offset="2" set="0"/>
+          <p>8 0 0 3 1 1 5 2 2 6 25 33 7 26 34 8 0 35 8 0 36 0 27 37 2 28 38 0 27 39 1 29 40 2 28 41 2 28 42 3 1 43 8 0 44 3 1 45 4 30 46 5 2 47 5 2 48 6 25 49 8 0 50</p>
+        </triangles>
+        <triangles material="metal-material" count="25">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh-map-0" offset="2" set="0"/>
+          <p>14 3 3 12 4 4 17 5 5 4 6 6 14 7 7 5 8 8 1 9 9 11 10 10 2 11 11 8 12 12 9 13 13 0 14 14 5 8 15 15 15 16 6 16 17 2 11 18 12 17 19 3 18 20 6 16 21 16 19 22 7 20 23 3 18 24 13 21 25 4 6 26 0 14 27 10 22 28 1 9 29 7 23 30 17 24 31 8 12 32 17 5 51 16 4 52 15 31 53 15 31 54 14 3 55 17 5 56 14 3 57 13 4 58 12 4 59 12 4 60 11 4 61 17 5 62 11 4 63 10 4 64 9 4 65 9 4 66 17 5 67 11 4 68 4 6 69 13 21 70 14 7 71 1 9 72 10 22 73 11 10 74 8 12 75 17 24 76 9 13 77 5 8 78 14 7 79 15 15 80 2 11 81 11 10 82 12 17 83 6 16 84 15 15 85 16 19 86 3 18 87 12 17 88 13 21 89 0 14 90 9 13 91 10 22 92 7 23 93 16 32 94 17 24 95</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.014">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-positions-array" count="72">0.006808817 0.102294 0.002011656 0.09974473 0.009358048 0.002011656 0.1040043 6.4522e-5 0.002011656 0.1001319 -0.008067369 0.002011656 0.008745014 -0.1013905 0.002011656 2.25876e-4 -0.1037139 0.002011656 -0.007131516 -0.1013905 0.002011656 -0.09890574 -0.009229004 0.002011656 -0.1031653 -3.227e-4 0.002011656 -0.09968018 0.009745359 0.002011656 -0.0106166 0.09842169 0.002011656 -1.61339e-4 0.1042302 0.002011656 0.006808817 0.102294 -0.002011656 0.09974473 0.009358048 -0.002011656 0.1040043 6.4522e-5 -0.002011656 0.1001319 -0.008067369 -0.002011656 0.008745014 -0.1013905 -0.002011656 2.25876e-4 -0.1037139 -0.002011656 -0.007131516 -0.1013905 -0.002011656 -0.09890574 -0.009229004 -0.002011656 -0.1031653 -3.227e-4 -0.002011656 -0.09968018 0.009745359 -0.002011656 -0.0106166 0.09842169 -0.002011656 -1.61339e-4 0.1042302 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-normals-array" count="114">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.9999732 0.007328391 0 -0.8198378 0.5725958 0 -0.8198378 0.5725959 0 0.8470366 -0.5315346 0 0.6013256 -0.7990041 0 0.5198636 0.8542493 0 0.8169461 0.576714 0 0.8169463 0.5767139 0 -0.5064523 0.862268 0 -0.5064522 0.8622682 0 0.1178013 -0.9930373 0 0.1178013 -0.9930372 0 -0.5039564 -0.8637291 0 -0.821031 -0.5708837 0 -0.8210312 -0.5708835 0 0.9984081 0.05640125 0 0.9984083 0.05640125 0 0.0198127 0.9998038 0 0.0198127 0.9998038 0 -0.5039563 -0.8637292 0 -0.9999732 0.007328212 0 0.5198634 0.8542495 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-normals-array" count="38" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-map-0-array" count="264">0.4674007 0.2074147 0.477856 0.2132232 0.4848262 0.211287 0.5777621 0.1183511 0.3791117 0.09976398 0.5781493 0.1009256 0.5820217 0.1090576 0.5781493 0.1009256 0.5781493 0.1009256 0.3783372 0.1187384 0.4674007 0.2074147 0.4674007 0.2074147 0.4708859 0.007602512 0.3791117 0.09976398 0.3791117 0.09976398 0.5781493 0.1009256 0.4867624 0.007602512 0.4867624 0.007602512 0.4674007 0.2074147 0.477856 0.2132232 0.477856 0.2132232 0.4848262 0.211287 0.5777621 0.1183511 0.5777621 0.1183511 0.3791117 0.09976398 0.3748521 0.1086703 0.3748521 0.1086703 0.4867624 0.007602512 0.4782433 0.005279123 0.4782433 0.005279123 0.477856 0.2132232 0.4848262 0.211287 0.4848262 0.211287 0.5777621 0.1183511 0.5820217 0.1090576 0.5820217 0.1090576 0.3748521 0.1086703 0.3783372 0.1187384 0.3783372 0.1187384 0.4782433 0.005279123 0.4708859 0.007602512 0.4708859 0.007602512 0.4848262 0.211287 0.5777621 0.1183511 0.4674007 0.2074147 0.5777621 0.1183511 0.5820217 0.1090576 0.5781493 0.1009256 0.3791117 0.09976398 0.5781493 0.1009256 0.4708859 0.007602512 0.5781493 0.1009256 0.4867624 0.007602512 0.4708859 0.007602512 0.5777621 0.1183511 0.5781493 0.1009256 0.3791117 0.09976398 0.4867624 0.007602512 0.4782433 0.005279123 0.4708859 0.007602512 0.3791117 0.09976398 0.3748521 0.1086703 0.3783372 0.1187384 0.3783372 0.1187384 0.4674007 0.2074147 0.3791117 0.09976398 0.3791117 0.09976398 0.4674007 0.2074147 0.5777621 0.1183511 0.5820217 0.1090576 0.5777621 0.1183511 0.5781493 0.1009256 0.5777621 0.1183511 0.4848262 0.211287 0.4674007 0.2074147 0.4848262 0.211287 0.477856 0.2132232 0.4674007 0.2074147 0.4674007 0.2074147 0.3783372 0.1187384 0.3791117 0.09976398 0.3783372 0.1187384 0.3748521 0.1086703 0.3791117 0.09976398 0.3791117 0.09976398 0.4708859 0.007602512 0.5781493 0.1009256 0.4674007 0.2074147 0.3791117 0.09976398 0.5777621 0.1183511 0.4708859 0.007602512 0.4782433 0.005279123 0.4867624 0.007602512 0.4867624 0.007602512 0.5781493 0.1009256 0.4708859 0.007602512 0.5820217 0.1090576 0.5820217 0.1090576 0.5781493 0.1009256 0.3783372 0.1187384 0.3783372 0.1187384 0.4674007 0.2074147 0.4708859 0.007602512 0.4708859 0.007602512 0.3791117 0.09976398 0.5781493 0.1009256 0.5781493 0.1009256 0.4867624 0.007602512 0.4674007 0.2074147 0.4674007 0.2074147 0.477856 0.2132232 0.4848262 0.211287 0.4848262 0.211287 0.5777621 0.1183511 0.3791117 0.09976398 0.3791117 0.09976398 0.3748521 0.1086703 0.4867624 0.007602512 0.4867624 0.007602512 0.4782433 0.005279123 0.477856 0.2132232 0.477856 0.2132232 0.4848262 0.211287 0.5777621 0.1183511 0.5777621 0.1183511 0.5820217 0.1090576 0.3748521 0.1086703 0.3748521 0.1086703 0.3783372 0.1187384 0.4782433 0.005279123 0.4782433 0.005279123 0.4708859 0.007602512</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-map-0-array" count="132" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="10">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-map-0" offset="2" set="0"/>
+          <p>10 0 0 11 1 1 0 2 2 0 2 42 1 28 43 10 0 44 1 28 45 2 1 46 3 29 47 7 30 48 3 29 49 6 1 50 3 29 51 4 1 52 6 1 53 1 28 54 3 29 55 7 30 56 4 1 57 5 1 58 6 1 59 7 30 60 8 31 61 9 32 62 9 32 63 10 0 64 7 30 65 7 30 66 10 0 67 1 28 68</p>
+        </triangles>
+        <triangles material="metal-material" count="34">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh-map-0" offset="2" set="0"/>
+          <p>13 3 3 19 4 4 15 5 5 2 6 6 15 7 7 3 8 8 9 9 9 22 10 10 10 10 11 6 11 12 19 12 13 7 13 14 3 8 15 16 14 16 4 15 17 10 10 18 23 16 19 11 17 20 0 18 21 13 19 22 1 20 23 7 13 24 20 21 25 8 22 26 4 15 27 17 23 28 5 24 29 11 17 30 12 25 31 0 18 32 1 20 33 14 26 34 2 6 35 8 22 36 21 9 37 9 9 38 5 24 39 18 27 40 6 11 41 14 33 69 13 3 70 15 5 71 13 3 72 12 34 73 22 35 74 12 34 75 23 33 76 22 35 77 22 35 78 21 36 79 19 4 80 21 36 81 20 37 82 19 4 83 19 4 84 18 33 85 15 5 86 22 35 87 19 4 88 13 3 89 18 33 90 17 33 91 16 33 92 16 33 93 15 5 94 18 33 95 2 6 96 14 26 97 15 7 98 9 9 99 21 9 100 22 10 101 6 11 102 18 27 103 19 12 104 3 8 105 15 7 106 16 14 107 10 10 108 22 10 109 23 16 110 0 18 111 12 25 112 13 19 113 7 13 114 19 12 115 20 21 116 4 15 117 16 14 118 17 23 119 11 17 120 23 16 121 12 25 122 1 20 123 13 19 124 14 26 125 8 22 126 20 21 127 21 9 128 5 24 129 17 23 130 18 27 131</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.013">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-positions-array" count="48">-0.08856374 0.1132524 0.002011656 0.08835375 0.1128322 0.002011656 0.09381681 0.1077894 0.002011656 0.09381681 -0.1061084 0.002011656 0.08793359 -0.1136727 0.002011656 -0.08772331 -0.1136727 0.002011656 -0.09360653 -0.1065287 0.002011656 -0.0940268 0.1061085 0.002011656 -0.08856374 0.1132524 -0.002011656 0.08835375 0.1128322 -0.002011656 0.09381681 0.1077894 -0.002011656 0.09381681 -0.1061084 -0.002011656 0.08793359 -0.1136727 -0.002011656 -0.08772331 -0.1136727 -0.002011656 -0.09360653 -0.1065287 -0.002011656 -0.0940268 0.1061085 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-normals-array" count="93">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 -0.4393538 0.8983142 0 0.4267857 0.9043528 0 0.426786 0.9043527 0 -0.9160452 -0.4010751 0 -0.945874 0.3245342 0 -0.945874 0.324534 0 0.4419625 -0.8970335 0 -0.3652451 -0.9309114 0 -0.3652446 -0.9309117 0 0.9475109 -0.3197237 0 0.441962 -0.8970338 0 0.940923 0.3386206 0 0.9409229 0.3386211 0 -0.439354 0.898314 0 -0.9160452 -0.401075 0 0.9475107 -0.3197242 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-normals-array" count="31" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-map-0-array" count="168">0.7963171 0.2411453 0.8017801 0.2482892 0.9786976 0.247869 0.8026205 0.02136409 0.9782776 0.02136409 0.9841607 0.02892827 0.9782776 0.02136409 0.8026205 0.02136409 0.8026205 0.02136409 0.9841607 0.2428262 0.9841607 0.02892827 0.9841607 0.02892827 0.8017801 0.2482892 0.9786976 0.247869 0.9786976 0.247869 0.7963171 0.2411453 0.8017801 0.2482892 0.8017801 0.2482892 0.8026205 0.02136409 0.7967373 0.028508 0.7967373 0.028508 0.9841607 0.02892827 0.9782776 0.02136409 0.9782776 0.02136409 0.9786976 0.247869 0.9841607 0.2428262 0.9841607 0.2428262 0.7967373 0.028508 0.7963171 0.2411453 0.7963171 0.2411453 0.9786976 0.247869 0.9841607 0.2428262 0.7963171 0.2411453 0.9841607 0.2428262 0.9841607 0.02892827 0.7963171 0.2411453 0.9841607 0.02892827 0.9782776 0.02136409 0.8026205 0.02136409 0.8026205 0.02136409 0.7967373 0.028508 0.9841607 0.02892827 0.7967373 0.028508 0.7963171 0.2411453 0.9841607 0.02892827 0.9841607 0.02892827 0.9841607 0.2428262 0.7963171 0.2411453 0.9841607 0.2428262 0.9786976 0.247869 0.7963171 0.2411453 0.9786976 0.247869 0.8017801 0.2482892 0.7963171 0.2411453 0.7963171 0.2411453 0.7967373 0.028508 0.9841607 0.02892827 0.7967373 0.028508 0.8026205 0.02136409 0.9841607 0.02892827 0.9782776 0.02136409 0.9782776 0.02136409 0.8026205 0.02136409 0.9841607 0.2428262 0.9841607 0.2428262 0.9841607 0.02892827 0.8017801 0.2482892 0.8017801 0.2482892 0.9786976 0.247869 0.7963171 0.2411453 0.7963171 0.2411453 0.8017801 0.2482892 0.8026205 0.02136409 0.8026205 0.02136409 0.7967373 0.028508 0.9841607 0.02892827 0.9841607 0.02892827 0.9782776 0.02136409 0.9786976 0.247869 0.9786976 0.247869 0.9841607 0.2428262 0.7967373 0.028508 0.7967373 0.028508 0.7963171 0.2411453</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="6">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-map-0" offset="2" set="0"/>
+          <p>7 0 0 0 1 1 1 2 2 1 2 30 2 21 31 7 0 32 2 21 33 3 22 34 7 0 35 3 22 36 4 23 37 5 24 38 5 24 39 6 25 40 3 22 41 6 25 42 7 0 43 3 22 44</p>
+        </triangles>
+        <triangles material="metal-material" count="22">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh-map-0" offset="2" set="0"/>
+          <p>13 3 3 12 3 4 11 4 5 4 5 6 13 6 7 5 7 8 2 8 9 11 9 10 3 10 11 0 11 12 9 12 13 1 13 14 7 14 15 8 15 16 0 11 17 5 7 18 14 16 19 6 17 20 3 10 21 12 18 22 4 5 23 1 13 24 10 19 25 2 8 26 6 17 27 15 20 28 7 14 29 11 4 45 10 26 46 15 27 47 10 26 48 9 28 49 15 27 50 9 28 51 8 29 52 15 27 53 15 27 54 14 30 55 11 4 56 14 30 57 13 3 58 11 4 59 4 5 60 12 18 61 13 6 62 2 8 63 10 19 64 11 9 65 0 11 66 8 15 67 9 12 68 7 14 69 15 20 70 8 15 71 5 7 72 13 6 73 14 16 74 3 10 75 11 9 76 12 18 77 1 13 78 9 12 79 10 19 80 6 17 81 14 16 82 15 20 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.012">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-positions-array" count="48">-0.07623392 0.09493565 0.002011656 -0.07252788 0.09771519 0.002011656 0.07172065 0.09743779 0.002011656 0.07643651 0.09521859 0.002011656 0.0758816 -0.09396892 0.002011656 0.0728302 -0.09840732 0.002011656 -0.0719732 -0.09840732 0.002011656 -0.0761342 -0.09452372 0.002011656 -0.07623392 0.09493565 -0.002011656 -0.07252788 0.09771519 -0.002011656 0.07172065 0.09743779 -0.002011656 0.07643651 0.09521859 -0.002011656 0.0758816 -0.09396892 -0.002011656 0.0728302 -0.09840732 -0.002011656 -0.0719732 -0.09840732 -0.002011656 -0.0761342 -0.09452372 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-normals-array" count="90">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.894545 -0.446978 0 0.3153156 -0.948987 0 0.3153159 -0.9489868 0 0.9170434 0.3987877 0 0.894545 -0.4469779 0 -0.4655498 0.8850216 0 0.3667069 0.9303366 0 0.3667066 0.9303367 0 -0.8451182 -0.5345796 0 -0.9545624 0.298011 0 -0.9545623 0.2980115 0 -0.2190902 -0.9757047 0 -0.2190905 -0.9757046 0 0.9170432 0.398788 0 -0.4655498 0.8850218 0 -0.8451179 -0.5345799 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-normals-array" count="30" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-map-0-array" count="168">0.9759397 0.4743735 0.9801006 0.2829667 0.8280848 0.2824119 0.9801006 0.2829667 0.9759397 0.4743735 0.8280848 0.2824119 0.8279851 0.4718714 0.8316911 0.4746509 0.8316911 0.4746509 0.8280848 0.2824119 0.8279851 0.4718714 0.8279851 0.4718714 0.9770492 0.2785283 0.8322458 0.2785283 0.8322458 0.2785283 0.9806554 0.4721543 0.9801006 0.2829667 0.9801006 0.2829667 0.8316911 0.4746509 0.9759397 0.4743735 0.9759397 0.4743735 0.8322458 0.2785283 0.8280848 0.2824119 0.8280848 0.2824119 0.9801006 0.2829667 0.9770492 0.2785283 0.9770492 0.2785283 0.9759397 0.4743735 0.9806554 0.4721543 0.9806554 0.4721543 0.9759397 0.4743735 0.9806554 0.4721543 0.9801006 0.2829667 0.9801006 0.2829667 0.9770492 0.2785283 0.8322458 0.2785283 0.8322458 0.2785283 0.8280848 0.2824119 0.9801006 0.2829667 0.8280848 0.2824119 0.8279851 0.4718714 0.8316911 0.4746509 0.9759397 0.4743735 0.8280848 0.2824119 0.8316911 0.4746509 0.9801006 0.2829667 0.9806554 0.4721543 0.9759397 0.4743735 0.9759397 0.4743735 0.8316911 0.4746509 0.8280848 0.2824119 0.8316911 0.4746509 0.8279851 0.4718714 0.8280848 0.2824119 0.8280848 0.2824119 0.8322458 0.2785283 0.9801006 0.2829667 0.8322458 0.2785283 0.9770492 0.2785283 0.9801006 0.2829667 0.8279851 0.4718714 0.8279851 0.4718714 0.8316911 0.4746509 0.8280848 0.2824119 0.8280848 0.2824119 0.8279851 0.4718714 0.9770492 0.2785283 0.9770492 0.2785283 0.8322458 0.2785283 0.9806554 0.4721543 0.9806554 0.4721543 0.9801006 0.2829667 0.8316911 0.4746509 0.8316911 0.4746509 0.9759397 0.4743735 0.8322458 0.2785283 0.8322458 0.2785283 0.8280848 0.2824119 0.9801006 0.2829667 0.9801006 0.2829667 0.9770492 0.2785283 0.9759397 0.4743735 0.9759397 0.4743735 0.9806554 0.4721543</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="6">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-map-0" offset="2" set="0"/>
+          <p>2 0 0 4 1 1 7 2 2 2 0 30 3 22 31 4 1 32 4 1 33 5 23 34 6 24 35 6 24 36 7 2 37 4 1 38 7 2 39 0 25 40 1 26 41 2 0 42 7 2 43 1 26 44</p>
+        </triangles>
+        <triangles material="metal-material" count="22">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh-map-0" offset="2" set="0"/>
+          <p>12 3 3 10 4 4 15 5 5 0 6 6 9 7 7 1 8 8 7 9 9 8 10 10 0 6 11 5 11 12 14 12 13 6 13 14 3 14 15 12 15 16 4 16 17 1 8 18 10 17 19 2 18 20 6 13 21 15 19 22 7 9 23 4 16 24 13 20 25 5 11 26 2 18 27 11 21 28 3 14 29 12 3 45 11 27 46 10 4 47 10 4 48 9 28 49 15 5 50 9 28 51 8 29 52 15 5 53 15 5 54 14 29 55 12 3 56 14 29 57 13 29 58 12 3 59 0 6 60 8 10 61 9 7 62 7 9 63 15 19 64 8 10 65 5 11 66 13 20 67 14 12 68 3 14 69 11 21 70 12 15 71 1 8 72 9 7 73 10 17 74 6 13 75 14 12 76 15 19 77 4 16 78 12 15 79 13 20 80 2 18 81 10 17 82 11 21 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.011">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-positions-array" count="48">-0.08416742 0.1122483 0.002011656 0.08586806 0.1126627 0.002011656 0.08820629 0.1103245 0.002011656 0.08743673 -0.109375 0.002011656 0.08368217 -0.1128407 0.002011656 -0.08538037 -0.1120457 0.002011656 -0.08763039 -0.1082207 0.002011656 -0.08801507 0.1072463 0.002011656 -0.08416742 0.1122483 -0.002011656 0.08586806 0.1126627 -0.002011656 0.08820629 0.1103245 -0.002011656 0.08743673 -0.109375 -0.002011656 0.08368217 -0.1128407 -0.002011656 -0.08538037 -0.1120457 -0.002011656 -0.08763039 -0.1082207 -0.002011656 -0.08801507 0.1072463 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-normals-array" count="93">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.9646318 0.263601 0 0.9470234 -0.3211645 0 0.9470234 -0.3211648 0 -0.3619512 0.932197 0 0.4985168 0.8668801 0 0.4985174 0.8668797 0 -0.9245496 -0.3810617 0 -0.9153428 0.4026758 0 -0.9153429 0.4026756 0 0.442842 -0.8965997 0 -0.3815606 -0.924344 0 -0.3815603 -0.924344 0 0.4428414 -0.8966 0 0.9646316 0.2636021 0 -0.3619512 0.932197 0 -0.9245498 -0.3810615 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-normals-array" count="31" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-map-0-array" count="168">0.9756857 0.7298287 0.8066232 0.7306238 0.8043732 0.7344488 0.9802098 0.9529939 0.9778715 0.9553322 0.8039883 0.9499158 0.8043732 0.7344488 0.8039883 0.9499158 0.8039883 0.9499158 0.9756857 0.7298287 0.8066232 0.7306238 0.8066232 0.7306238 0.9802098 0.9529939 0.9794403 0.7332944 0.9794403 0.7332944 0.807836 0.9549177 0.9778715 0.9553322 0.9778715 0.9553322 0.8039883 0.9499158 0.807836 0.9549177 0.807836 0.9549177 0.8066232 0.7306238 0.8043732 0.7344488 0.8043732 0.7344488 0.9794403 0.7332944 0.9756857 0.7298287 0.9756857 0.7298287 0.9778715 0.9553322 0.9802098 0.9529939 0.9802098 0.9529939 0.8043732 0.7344488 0.8039883 0.9499158 0.9794403 0.7332944 0.8039883 0.9499158 0.807836 0.9549177 0.9778715 0.9553322 0.9802098 0.9529939 0.8039883 0.9499158 0.9778715 0.9553322 0.9802098 0.9529939 0.9794403 0.7332944 0.8039883 0.9499158 0.9794403 0.7332944 0.9756857 0.7298287 0.8043732 0.7344488 0.807836 0.9549177 0.8039883 0.9499158 0.9778715 0.9553322 0.8039883 0.9499158 0.8043732 0.7344488 0.9794403 0.7332944 0.9794403 0.7332944 0.8043732 0.7344488 0.9756857 0.7298287 0.8043732 0.7344488 0.8066232 0.7306238 0.9756857 0.7298287 0.9794403 0.7332944 0.9802098 0.9529939 0.8039883 0.9499158 0.8043732 0.7344488 0.8043732 0.7344488 0.8039883 0.9499158 0.9756857 0.7298287 0.9756857 0.7298287 0.8066232 0.7306238 0.9802098 0.9529939 0.9802098 0.9529939 0.9794403 0.7332944 0.807836 0.9549177 0.807836 0.9549177 0.9778715 0.9553322 0.8039883 0.9499158 0.8039883 0.9499158 0.807836 0.9549177 0.8066232 0.7306238 0.8066232 0.7306238 0.8043732 0.7344488 0.9794403 0.7332944 0.9794403 0.7332944 0.9756857 0.7298287 0.9778715 0.9553322 0.9778715 0.9553322 0.9802098 0.9529939</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="6">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-map-0" offset="2" set="0"/>
+          <p>4 0 0 5 1 1 6 2 2 6 2 30 7 22 31 3 23 32 7 22 33 0 24 34 1 25 35 2 23 36 7 22 37 1 25 38 2 23 39 3 23 40 7 22 41 3 23 42 4 0 43 6 2 44</p>
+        </triangles>
+        <triangles material="metal-material" count="22">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh-map-0" offset="2" set="0"/>
+          <p>10 3 3 9 4 4 15 5 5 6 6 6 15 7 7 7 8 8 4 9 9 13 10 10 5 11 11 2 12 12 11 13 13 3 14 14 0 15 15 9 16 16 1 17 17 7 8 18 8 18 19 0 15 20 5 11 21 14 19 22 6 6 23 3 14 24 12 20 25 4 9 26 1 17 27 10 21 28 2 12 29 8 26 45 15 5 46 9 4 47 15 5 48 14 27 49 11 28 50 11 28 51 14 27 52 12 29 53 14 27 54 13 30 55 12 29 56 11 28 57 10 3 58 15 5 59 6 6 60 14 19 61 15 7 62 4 9 63 12 20 64 13 10 65 2 12 66 10 21 67 11 13 68 0 15 69 8 18 70 9 16 71 7 8 72 15 7 73 8 18 74 5 11 75 13 10 76 14 19 77 3 14 78 11 13 79 12 20 80 1 17 81 9 16 82 10 21 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.004">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-positions-array" count="54">-0.009962558 0.1084113 0.002011656 -0.002196431 0.1119413 0.002011656 0.01051163 0.1077053 0.002011656 0.09664458 -0.04691028 0.002011656 0.09735059 -0.0567944 0.002011656 0.08817243 -0.06385445 0.002011656 -0.08621138 -0.06314843 0.002011656 -0.09821349 -0.0567944 0.002011656 -0.0960955 -0.04055619 0.002011656 -0.009962558 0.1084113 -0.002011656 -0.002196431 0.1119413 -0.002011656 0.01051163 0.1077053 -0.002011656 0.09664458 -0.04691028 -0.002011656 0.09735059 -0.0567944 -0.002011656 0.08817243 -0.06385445 -0.002011656 -0.08621138 -0.06314843 -0.002011656 -0.09821349 -0.0567944 -0.002011656 -0.0960955 -0.04055619 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-positions-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-normals-array" count="99">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.9123129 0.4094938 0 -0.3200874 0.947388 0 -0.320087 0.9473882 0 0.05241441 -0.9986254 0 -0.6381895 -0.7698795 0 -0.6381894 -0.7698794 0 0.9470205 -0.3211733 0 0.6717704 -0.7407594 0 0.6717701 -0.7407598 0 0.2430151 0.9700226 0 0.2430154 0.9700224 0 -0.9583058 -0.2857447 0 -0.9583058 -0.2857447 0 0.4678862 0.8837887 0 0.4678861 0.8837888 0 -0.9123129 0.4094938 0 0.05241441 -0.9986254 0 0.9916008 -0.129337 0 0.9470205 -0.321173 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0.9916007 -0.129337 0</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-normals-array" count="33" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-map-0-array" count="192">0.01646411 0.821873 0.2092042 0.8155189 0.2007321 0.7985747 0.2007321 0.7985747 0.2092042 0.8155189 0.01646411 0.821873 0.2099102 0.8056347 0.2007321 0.7985747 0.2007321 0.7985747 0.1103632 0.9743706 0.1230713 0.9701345 0.1230713 0.9701345 0.01646411 0.821873 0.102597 0.9708405 0.102597 0.9708405 0.2007321 0.7985747 0.02634823 0.7992808 0.02634823 0.7992808 0.1230713 0.9701345 0.2092042 0.8155189 0.2092042 0.8155189 0.02634823 0.7992808 0.01434612 0.8056347 0.01434612 0.8056347 0.2092042 0.8155189 0.2099102 0.8056347 0.2099102 0.8056347 0.102597 0.9708405 0.1103632 0.9743706 0.1103632 0.9743706 0.01434612 0.8056347 0.01646411 0.821873 0.01646411 0.821873 0.02634823 0.7992808 0.01434612 0.8056347 0.01646411 0.821873 0.01646411 0.821873 0.102597 0.9708405 0.1230713 0.9701345 0.102597 0.9708405 0.1103632 0.9743706 0.1230713 0.9701345 0.1230713 0.9701345 0.2092042 0.8155189 0.01646411 0.821873 0.2092042 0.8155189 0.2099102 0.8056347 0.2007321 0.7985747 0.2007321 0.7985747 0.02634823 0.7992808 0.01646411 0.821873 0.01646411 0.821873 0.01434612 0.8056347 0.02634823 0.7992808 0.02634823 0.7992808 0.2007321 0.7985747 0.01646411 0.821873 0.2007321 0.7985747 0.2099102 0.8056347 0.2092042 0.8155189 0.2092042 0.8155189 0.1230713 0.9701345 0.01646411 0.821873 0.1230713 0.9701345 0.1103632 0.9743706 0.102597 0.9708405 0.102597 0.9708405 0.01646411 0.821873 0.1230713 0.9701345 0.2099102 0.8056347 0.2099102 0.8056347 0.2007321 0.7985747 0.1103632 0.9743706 0.1103632 0.9743706 0.1230713 0.9701345 0.01646411 0.821873 0.01646411 0.821873 0.102597 0.9708405 0.2007321 0.7985747 0.2007321 0.7985747 0.02634823 0.7992808 0.1230713 0.9701345 0.1230713 0.9701345 0.2092042 0.8155189 0.02634823 0.7992808 0.02634823 0.7992808 0.01434612 0.8056347 0.2092042 0.8155189 0.2092042 0.8155189 0.2099102 0.8056347 0.102597 0.9708405 0.102597 0.9708405 0.1103632 0.9743706 0.01434612 0.8056347 0.01434612 0.8056347 0.01646411 0.821873</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-map-0-array" count="96" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="7">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-map-0" offset="2" set="0"/>
+          <p>8 0 0 3 1 1 5 2 2 6 25 33 7 26 34 8 0 35 8 0 36 0 27 37 2 28 38 0 27 39 1 29 40 2 28 41 2 28 42 3 1 43 8 0 44 3 1 45 4 30 46 5 2 47 5 2 48 6 25 49 8 0 50</p>
+        </triangles>
+        <triangles material="metal-material" count="25">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh-map-0" offset="2" set="0"/>
+          <p>14 3 3 12 4 4 17 5 5 4 6 6 14 7 7 5 8 8 1 9 9 11 10 10 2 11 11 8 12 12 9 13 13 0 14 14 5 8 15 15 15 16 6 16 17 2 11 18 12 17 19 3 18 20 6 16 21 16 19 22 7 20 23 3 18 24 13 21 25 4 6 26 0 14 27 10 22 28 1 9 29 7 23 30 17 24 31 8 12 32 17 5 51 16 4 52 15 31 53 15 31 54 14 3 55 17 5 56 14 3 57 13 4 58 12 4 59 12 4 60 11 4 61 17 5 62 11 4 63 10 4 64 9 4 65 9 4 66 17 5 67 11 4 68 4 6 69 13 21 70 14 7 71 1 9 72 10 22 73 11 10 74 8 12 75 17 24 76 9 13 77 5 8 78 14 7 79 15 15 80 2 11 81 11 10 82 12 17 83 6 16 84 15 15 85 16 19 86 3 18 87 12 17 88 13 21 89 0 14 90 9 13 91 10 22 92 7 23 93 16 32 94 17 24 95</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh" name="TexturesCom_Graphic_WarningLabelSet_512_graphic.002">
+      <mesh>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-positions">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-positions-array" count="48">-0.06494492 0.08529096 0.002011656 0.06584423 0.08566254 0.002011656 0.07231897 0.07885146 0.002011656 0.07276445 -0.07944995 0.002011656 0.06662094 -0.08559346 0.002011656 -0.06721329 -0.08483737 0.002011656 -0.07288426 -0.07992255 0.002011656 -0.07250618 0.07999813 0.002011656 -0.06494492 0.08529096 -0.002011656 0.06584423 0.08566254 -0.002011656 0.07231897 0.07885146 -0.002011656 0.07276445 -0.07944995 -0.002011656 0.06662094 -0.08559346 -0.002011656 -0.06721329 -0.08483737 -0.002011656 -0.07288426 -0.07992255 -0.002011656 -0.07250618 0.07999813 -0.002011656</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-normals">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-normals-array" count="93">0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.9101417 0.4142972 0 0.8864321 -0.4628586 0 0.8864321 -0.4628586 0 -0.3800708 0.9249575 0 0.3521521 0.9359428 0 0.3521523 0.9359428 0 -0.9281255 -0.3722677 0 -0.9244168 0.3813837 0 -0.9244167 0.3813841 0 0.3019942 -0.9533098 0 -0.3930392 -0.9195218 0 -0.3930386 -0.919522 0 0.3019939 -0.95331 0 0.9101416 0.4142974 0 -0.3800709 0.9249574 0 -0.9281255 -0.3722677 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-normals-array" count="31" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-map-0">
+          <float_array id="TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-map-0-array" count="168">0.4184626 0.8065122 0.4123191 0.8003688 0.2784847 0.8011249 0.418017 0.9648137 0.4115422 0.9716249 0.2807531 0.9712532 0.2728137 0.8060398 0.2731919 0.9659605 0.2731919 0.9659605 0.4123191 0.8003688 0.2784847 0.8011249 0.2784847 0.8011249 0.418017 0.9648137 0.4184626 0.8065122 0.4184626 0.8065122 0.2807531 0.9712532 0.4115422 0.9716249 0.4115422 0.9716249 0.2731919 0.9659605 0.2807531 0.9712532 0.2807531 0.9712532 0.2784847 0.8011249 0.2728137 0.8060398 0.2728137 0.8060398 0.4184626 0.8065122 0.4123191 0.8003688 0.4123191 0.8003688 0.4115422 0.9716249 0.418017 0.9648137 0.418017 0.9648137 0.2784847 0.8011249 0.2728137 0.8060398 0.4184626 0.8065122 0.2728137 0.8060398 0.2731919 0.9659605 0.2807531 0.9712532 0.2807531 0.9712532 0.4115422 0.9716249 0.418017 0.9648137 0.418017 0.9648137 0.4184626 0.8065122 0.2807531 0.9712532 0.2807531 0.9712532 0.4184626 0.8065122 0.2728137 0.8060398 0.2731919 0.9659605 0.2728137 0.8060398 0.2807531 0.9712532 0.2728137 0.8060398 0.2784847 0.8011249 0.4184626 0.8065122 0.2807531 0.9712532 0.2728137 0.8060398 0.4184626 0.8065122 0.2784847 0.8011249 0.4123191 0.8003688 0.4184626 0.8065122 0.4184626 0.8065122 0.418017 0.9648137 0.2807531 0.9712532 0.2728137 0.8060398 0.2728137 0.8060398 0.2731919 0.9659605 0.4123191 0.8003688 0.4123191 0.8003688 0.2784847 0.8011249 0.418017 0.9648137 0.418017 0.9648137 0.4184626 0.8065122 0.2807531 0.9712532 0.2807531 0.9712532 0.4115422 0.9716249 0.2731919 0.9659605 0.2731919 0.9659605 0.2807531 0.9712532 0.2784847 0.8011249 0.2784847 0.8011249 0.2728137 0.8060398 0.4184626 0.8065122 0.4184626 0.8065122 0.4123191 0.8003688 0.4115422 0.9716249 0.4115422 0.9716249 0.418017 0.9648137</float_array>
+          <technique_common>
+            <accessor source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-vertices">
+          <input semantic="POSITION" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-positions"/>
+        </vertices>
+        <triangles material="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" count="6">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 4 1 1 5 2 2 5 2 30 6 22 31 3 0 32 6 22 33 7 23 34 0 24 35 0 24 36 1 25 37 2 25 38 2 25 39 3 0 40 0 24 41 0 24 42 3 0 43 6 22 44</p>
+        </triangles>
+        <triangles material="metal-material" count="22">
+          <input semantic="VERTEX" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh-map-0" offset="2" set="0"/>
+          <p>10 3 3 9 4 4 8 5 5 6 6 6 15 7 7 7 8 8 4 9 9 13 10 10 5 11 11 2 12 12 11 13 13 3 14 14 0 15 15 9 16 16 1 17 17 7 8 18 8 18 19 0 15 20 5 11 21 14 19 22 6 6 23 3 14 24 12 20 25 4 9 26 1 17 27 10 21 28 2 12 29 15 26 45 14 27 46 8 5 47 14 27 48 13 28 49 11 29 50 8 5 51 14 27 52 11 29 53 13 28 54 12 30 55 11 29 56 11 29 57 10 3 58 8 5 59 6 6 60 14 19 61 15 7 62 4 9 63 12 20 64 13 10 65 2 12 66 10 21 67 11 13 68 0 15 69 8 18 70 9 16 71 7 8 72 15 7 73 8 18 74 5 11 75 13 10 76 14 19 77 3 14 78 11 13 79 12 20 80 1 17 81 9 16 82 10 21 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Camera" name="Camera" type="NODE">
+        <matrix sid="transform">0.6794412 0.3712921 -0.6328521 -1.362397 -0.7337299 0.3438199 -0.5860275 -1.261593 -2.35182e-7 0.8625138 0.5060336 1.089383 0 0 0 1</matrix>
+        <instance_camera url="#Camera-camera"/>
+      </node>
+      <node id="Pole" name="Pole" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Plane-mesh" name="Pole">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Stay_clear" name="Stay_clear" type="NODE">
+        <matrix sid="transform">1 0 0 0.9030607 0 -4.37114e-8 -1 0.3252236 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_028-mesh" name="Stay_clear">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Danger_fingies" name="Danger_fingies" type="NODE">
+        <matrix sid="transform">1 0 0 0.6816339 0 -4.37114e-8 -1 0.3144565 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_027-mesh" name="Danger_fingies">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Dont_look" name="Dont_look" type="NODE">
+        <matrix sid="transform">1 0 0 0.1939029 0 -4.37114e-8 -1 0.8504618 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_026-mesh" name="Dont_look">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Dont_touch" name="Dont_touch" type="NODE">
+        <matrix sid="transform">1 0 0 0.1939029 0 -4.37114e-8 -1 0.6090345 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_025-mesh" name="Dont_touch">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Hand_fire" name="Hand_fire" type="NODE">
+        <matrix sid="transform">1 0 0 0.1939029 0 -4.37114e-8 -1 0.4154262 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_024-mesh" name="Hand_fire">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Hand_acid" name="Hand_acid" type="NODE">
+        <matrix sid="transform">1 0 0 0.1939029 0 -4.37114e-8 -1 0.2106541 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_023-mesh" name="Hand_acid">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Film_cam" name="Film_cam" type="NODE">
+        <matrix sid="transform">1 0 0 -0.2 0 -4.37114e-8 -1 0.5842359 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_022-mesh" name="Film_cam">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Picturea_cam" name="Picturea_cam" type="NODE">
+        <matrix sid="transform">1 0 0 -0.2 0 -4.37114e-8 -1 0.4066751 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_021-mesh" name="Picturea_cam">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Glasses" name="Glasses" type="NODE">
+        <matrix sid="transform">1 0 0 -0.2 0 -4.37114e-8 -1 0.2006202 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_020-mesh" name="Glasses">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Radiation_zone" name="Radiation_zone" type="NODE">
+        <matrix sid="transform">-1 -3.25841e-7 1.4243e-14 -0.5037411 0 -4.37114e-8 -1 0.8432617 3.25841e-7 -1 4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_019-mesh" name="Radiation_zone">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Radiation_signal" name="Radiation_signal" type="NODE">
+        <matrix sid="transform">1 0 0 -0.5037411 0 -4.37114e-8 -1 0.5791084 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_018-mesh" name="Radiation_signal">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Skull_zapped" name="Skull_zapped" type="NODE">
+        <matrix sid="transform">1 0 0 -0.5037411 0 -4.37114e-8 -1 0.3867312 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_017-mesh" name="Skull_zapped">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Broken_bone" name="Broken_bone" type="NODE">
+        <matrix sid="transform">1 0 0 -0.5037411 0 -4.37114e-8 -1 0.1807779 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_015-mesh" name="Broken_bone">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Broken_glasses" name="Broken_glasses" type="NODE">
+        <matrix sid="transform">1 0 0 6.05524e-4 0 -4.37114e-8 -1 0 0 1 -4.37114e-8 0.4699598 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_014-mesh" name="Broken_glasses">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Dude_chopped_in_half" name="Dude_chopped_in_half" type="NODE">
+        <matrix sid="transform">1 0 0 0.9030607 0 -4.37114e-8 -1 0 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_013-mesh" name="Dude_chopped_in_half">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Danger_fingies_001" name="Danger_fingies.001" type="NODE">
+        <matrix sid="transform">1 0 0 0.6816339 0 -4.37114e-8 -1 0 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_012-mesh" name="Danger_fingies.001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Do_Not_Point" name="Do_Not_Point" type="NODE">
+        <matrix sid="transform">1 0 0 0.4 0 -4.37114e-8 -1 0 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_011-mesh" name="Do_Not_Point">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Hand_hurt" name="Hand_hurt" type="NODE">
+        <matrix sid="transform">1 0 0 -0.5 0 -4.37114e-8 -1 0 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_004-mesh" name="Hand_hurt">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Finger_zapped" name="Finger_zapped" type="NODE">
+        <matrix sid="transform">1 0 0 0.1939029 0 -4.37114e-8 -1 0 0 1 -4.37114e-8 0.4672948 0 0 0 1</matrix>
+        <instance_geometry url="#TexturesCom_Graphic_WarningLabelSet_512_graphic_002-mesh" name="Finger_zapped">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TexturesCom_Graphic_WarningLabelSet_512_graphic-material" target="#TexturesCom_Graphic_WarningLabelSet_512_graphic-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="metal-material" target="#metal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
