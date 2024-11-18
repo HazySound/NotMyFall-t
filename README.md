@@ -1,5 +1,3 @@
-# 2024 넥토리얼 포트폴리오 Git - 박시몬   
-
 ## 🏷️ 기본 정보
 **Title :** NotMyFall-t   
 **Used tool :** Unity, Visual Studio 2019, GitHub, Discord   
